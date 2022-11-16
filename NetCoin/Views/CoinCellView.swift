@@ -44,7 +44,7 @@ struct CoinCellView: View {
                 Text(coin.priceChangePercentage24H.toPercentString())
                     .font(.caption)
                     .padding(.leading, 6)
-                    .foregroundColor(.red)
+                    .foregroundColor(coin.priceChangePercentage24H > 0 ? .green : .red)
             }
             .padding(.leading, 2)
         }
