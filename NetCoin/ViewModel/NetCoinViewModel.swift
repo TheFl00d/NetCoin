@@ -54,7 +54,7 @@ class NetCoinViewModel: ObservableObject {
     
     func configureTopMovingCoins() {
         let topMovers = coins.sorted(by: {$0.priceChangePercentage24H > $1.priceChangePercentage24H})
-        self.topMovingCoins = Array(topMovers.prefix(5))
+        self.topMovingCoins = Array(topMovers.prefix(8))
     }
     
  

@@ -6,13 +6,14 @@
 //
 
 import SwiftUI
-
+import Kingfisher
 struct TopMoversItemView: View {
     let coin: NetCoinData
     var body: some View {
         VStack(alignment: .leading) {
             //image
-            Image(systemName: "bitcoinsign.circle.fill")
+            KFImage(URL(string: coin.image))
+
                 .resizable()
                 .frame(width: 32, height: 32)
                 .foregroundColor(.orange)

@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+import Kingfisher
 struct CoinCellView: View {
     let coin: NetCoinData
     var body: some View {
@@ -14,7 +14,7 @@ struct CoinCellView: View {
             //market cap
             Text("\(coin.marketCapRank ?? 1)")
             // image
-            Image(systemName: "bitcoinsign.circle.fill")
+            KFImage(URL(string: coin.image))
                 .resizable()
                 .scaledToFit()
                 .frame(width: 32, height: 32)
