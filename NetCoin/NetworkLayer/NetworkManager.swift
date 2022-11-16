@@ -12,6 +12,13 @@ enum NetworkError: Error {
     case invalidUrl
 }
 
-protocol NetworkAction {
+
+
+
+class NetworkManager {
+    
+   
+    
     
 }
+

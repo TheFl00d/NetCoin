@@ -10,10 +10,11 @@ import SwiftUI
 @main
 struct NetCoinApp: App {
     let persistenceController = PersistenceController.shared
-
+ 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+           
+            HomeView(netCoinViewModel: NetCoinViewModel())
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }

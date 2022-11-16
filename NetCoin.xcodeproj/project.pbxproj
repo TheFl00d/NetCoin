@@ -16,6 +16,15 @@
 		564A207B29224B9F0016C1B5 /* NetCoinTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564A207A29224B9F0016C1B5 /* NetCoinTests.swift */; };
 		564A208529224B9F0016C1B5 /* NetCoinUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564A208429224B9F0016C1B5 /* NetCoinUITests.swift */; };
 		564A208729224B9F0016C1B5 /* NetCoinUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564A208629224B9F0016C1B5 /* NetCoinUITestsLaunchTests.swift */; };
+		564A209429224D130016C1B5 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564A209329224D130016C1B5 /* NetworkManager.swift */; };
+		564A209729224E340016C1B5 /* NetCoinData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564A209629224E340016C1B5 /* NetCoinData.swift */; };
+		564A209A29226D340016C1B5 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564A209929226D340016C1B5 /* HomeView.swift */; };
+		564A209C29226DC40016C1B5 /* TopMoversView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564A209B29226DC40016C1B5 /* TopMoversView.swift */; };
+		564A209E29226DD80016C1B5 /* TopMoversItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564A209D29226DD80016C1B5 /* TopMoversItemView.swift */; };
+		564A20A0292281FC0016C1B5 /* AllCoinsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564A209F292281FC0016C1B5 /* AllCoinsView.swift */; };
+		564A20A42922824A0016C1B5 /* CoinCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564A20A32922824A0016C1B5 /* CoinCellView.swift */; };
+		564A20A629228DCD0016C1B5 /* NetCoinViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564A20A529228DCD0016C1B5 /* NetCoinViewModel.swift */; };
+		56CDD0552924025B00EC112D /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CDD0542924025B00EC112D /* Endpoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +57,15 @@
 		564A208029224B9F0016C1B5 /* NetCoinUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetCoinUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		564A208429224B9F0016C1B5 /* NetCoinUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetCoinUITests.swift; sourceTree = "<group>"; };
 		564A208629224B9F0016C1B5 /* NetCoinUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetCoinUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		564A209329224D130016C1B5 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		564A209629224E340016C1B5 /* NetCoinData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetCoinData.swift; sourceTree = "<group>"; };
+		564A209929226D340016C1B5 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		564A209B29226DC40016C1B5 /* TopMoversView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopMoversView.swift; sourceTree = "<group>"; };
+		564A209D29226DD80016C1B5 /* TopMoversItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopMoversItemView.swift; sourceTree = "<group>"; };
+		564A209F292281FC0016C1B5 /* AllCoinsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllCoinsView.swift; sourceTree = "<group>"; };
+		564A20A32922824A0016C1B5 /* CoinCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinCellView.swift; sourceTree = "<group>"; };
+		564A20A529228DCD0016C1B5 /* NetCoinViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetCoinViewModel.swift; sourceTree = "<group>"; };
+		56CDD0542924025B00EC112D /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +116,9 @@
 		564A206329224B9E0016C1B5 /* NetCoin */ = {
 			isa = PBXGroup;
 			children = (
-				564A206429224B9E0016C1B5 /* NetCoinApp.swift */,
+				56CDD0402922955800EC112D /* ViewModel */,
+				564A209829226D0A0016C1B5 /* Views */,
+				564A209529224E0E0016C1B5 /* NetworkLayer */,
 				564A206629224B9E0016C1B5 /* ContentView.swift */,
 				564A206829224B9F0016C1B5 /* Assets.xcassets */,
 				564A206D29224B9F0016C1B5 /* Persistence.swift */,
@@ -131,6 +151,37 @@
 				564A208629224B9F0016C1B5 /* NetCoinUITestsLaunchTests.swift */,
 			);
 			path = NetCoinUITests;
+			sourceTree = "<group>";
+		};
+		564A209529224E0E0016C1B5 /* NetworkLayer */ = {
+			isa = PBXGroup;
+			children = (
+				564A206429224B9E0016C1B5 /* NetCoinApp.swift */,
+				564A209329224D130016C1B5 /* NetworkManager.swift */,
+				564A209629224E340016C1B5 /* NetCoinData.swift */,
+				56CDD0542924025B00EC112D /* Endpoint.swift */,
+			);
+			path = NetworkLayer;
+			sourceTree = "<group>";
+		};
+		564A209829226D0A0016C1B5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				564A209929226D340016C1B5 /* HomeView.swift */,
+				564A209B29226DC40016C1B5 /* TopMoversView.swift */,
+				564A209D29226DD80016C1B5 /* TopMoversItemView.swift */,
+				564A209F292281FC0016C1B5 /* AllCoinsView.swift */,
+				564A20A32922824A0016C1B5 /* CoinCellView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		56CDD0402922955800EC112D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				564A20A529228DCD0016C1B5 /* NetCoinViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,8 +314,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				564A209C29226DC40016C1B5 /* TopMoversView.swift in Sources */,
+				564A20A629228DCD0016C1B5 /* NetCoinViewModel.swift in Sources */,
+				564A209729224E340016C1B5 /* NetCoinData.swift in Sources */,
+				56CDD0552924025B00EC112D /* Endpoint.swift in Sources */,
+				564A209A29226D340016C1B5 /* HomeView.swift in Sources */,
+				564A20A42922824A0016C1B5 /* CoinCellView.swift in Sources */,
 				564A207129224B9F0016C1B5 /* NetCoin.xcdatamodeld in Sources */,
 				564A206E29224B9F0016C1B5 /* Persistence.swift in Sources */,
+				564A209429224D130016C1B5 /* NetworkManager.swift in Sources */,
+				564A209E29226DD80016C1B5 /* TopMoversItemView.swift in Sources */,
+				564A20A0292281FC0016C1B5 /* AllCoinsView.swift in Sources */,
 				564A206729224B9E0016C1B5 /* ContentView.swift in Sources */,
 				564A206529224B9E0016C1B5 /* NetCoinApp.swift in Sources */,
 			);

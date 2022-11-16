@@ -8,13 +8,26 @@
 import SwiftUI
 
 struct TopMoversView: View {
+    @StateObject var netCoinViewModel: NetCoinViewModel
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack(alignment: .leading) {
+            Text("Top Movers")
+                .font(.headline)
+            
+            ScrollView(.horizontal){
+                HStack(spacing: 16 ){
+                    ForEach(netCoinViewModel.topMovingCoins){ coin in
+                        TopMoversItemView(coin: coin)
+                    }
+                }
+            }
+        }
+        .padding()
     }
 }
 
-struct TopMoversView_Previews: PreviewProvider {
-    static var previews: some View {
-        TopMoversView()
-    }
-}
+//struct TopMoversView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        TopMoversView()
+//    }
+//}
