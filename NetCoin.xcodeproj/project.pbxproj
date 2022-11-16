@@ -26,6 +26,7 @@
 		564A20A629228DCD0016C1B5 /* NetCoinViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564A20A529228DCD0016C1B5 /* NetCoinViewModel.swift */; };
 		56CDD0552924025B00EC112D /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CDD0542924025B00EC112D /* Endpoint.swift */; };
 		56CDD05829252CE900EC112D /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 56CDD05729252CE900EC112D /* Kingfisher */; };
+		56CDD05B29252EAC00EC112D /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CDD05A29252EAC00EC112D /* Double.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		564A20A32922824A0016C1B5 /* CoinCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinCellView.swift; sourceTree = "<group>"; };
 		564A20A529228DCD0016C1B5 /* NetCoinViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetCoinViewModel.swift; sourceTree = "<group>"; };
 		56CDD0542924025B00EC112D /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		56CDD05A29252EAC00EC112D /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 		564A206329224B9E0016C1B5 /* NetCoin */ = {
 			isa = PBXGroup;
 			children = (
+				56CDD05929252E9800EC112D /* Extensions */,
 				56CDD0402922955800EC112D /* ViewModel */,
 				564A209829226D0A0016C1B5 /* Views */,
 				564A209529224E0E0016C1B5 /* NetworkLayer */,
@@ -184,6 +187,14 @@
 				564A20A529228DCD0016C1B5 /* NetCoinViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		56CDD05929252E9800EC112D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				56CDD05A29252EAC00EC112D /* Double.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -328,6 +339,7 @@
 				56CDD0552924025B00EC112D /* Endpoint.swift in Sources */,
 				564A209A29226D340016C1B5 /* HomeView.swift in Sources */,
 				564A20A42922824A0016C1B5 /* CoinCellView.swift in Sources */,
+				56CDD05B29252EAC00EC112D /* Double.swift in Sources */,
 				564A207129224B9F0016C1B5 /* NetCoin.xcdatamodeld in Sources */,
 				564A206E29224B9F0016C1B5 /* Persistence.swift in Sources */,
 				564A209429224D130016C1B5 /* NetworkManager.swift in Sources */,
