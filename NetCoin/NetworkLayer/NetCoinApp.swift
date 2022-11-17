@@ -13,9 +13,12 @@ struct NetCoinApp: App {
  
     var body: some Scene {
         WindowGroup {
-           
-            HomeView(netCoinViewModel: NetCoinViewModel())
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            NavigationView{
+                HomeView(netCoinViewModel: NetCoinViewModel())
+                    .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                    .navigationBarHidden(true)
+            }
+            
         }
     }
 }

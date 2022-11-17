@@ -28,6 +28,8 @@
 		56CDD05829252CE900EC112D /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 56CDD05729252CE900EC112D /* Kingfisher */; };
 		56CDD05B29252EAC00EC112D /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CDD05A29252EAC00EC112D /* Double.swift */; };
 		56CDD05D29268C5400EC112D /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CDD05C29268C5400EC112D /* Color.swift */; };
+		56CDD0602926937D00EC112D /* CircleButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CDD05F2926937D00EC112D /* CircleButtonView.swift */; };
+		56CDD06229269B9000EC112D /* CircleButtonAnimationVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CDD06129269B9000EC112D /* CircleButtonAnimationVIew.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +73,8 @@
 		56CDD0542924025B00EC112D /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		56CDD05A29252EAC00EC112D /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 		56CDD05C29268C5400EC112D /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		56CDD05F2926937D00EC112D /* CircleButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButtonView.swift; sourceTree = "<group>"; };
+		56CDD06129269B9000EC112D /* CircleButtonAnimationVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButtonAnimationVIew.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +178,7 @@
 		564A209829226D0A0016C1B5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				56CDD05E2926935E00EC112D /* Components */,
 				564A209929226D340016C1B5 /* HomeView.swift */,
 				564A209B29226DC40016C1B5 /* TopMoversView.swift */,
 				564A209D29226DD80016C1B5 /* TopMoversItemView.swift */,
@@ -198,6 +203,15 @@
 				56CDD05C29268C5400EC112D /* Color.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		56CDD05E2926935E00EC112D /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				56CDD05F2926937D00EC112D /* CircleButtonView.swift */,
+				56CDD06129269B9000EC112D /* CircleButtonAnimationVIew.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -341,11 +355,13 @@
 				564A209729224E340016C1B5 /* NetCoinData.swift in Sources */,
 				56CDD0552924025B00EC112D /* Endpoint.swift in Sources */,
 				564A209A29226D340016C1B5 /* HomeView.swift in Sources */,
+				56CDD06229269B9000EC112D /* CircleButtonAnimationVIew.swift in Sources */,
 				564A20A42922824A0016C1B5 /* CoinCellView.swift in Sources */,
 				56CDD05B29252EAC00EC112D /* Double.swift in Sources */,
 				564A207129224B9F0016C1B5 /* NetCoin.xcdatamodeld in Sources */,
 				56CDD05D29268C5400EC112D /* Color.swift in Sources */,
 				564A206E29224B9F0016C1B5 /* Persistence.swift in Sources */,
+				56CDD0602926937D00EC112D /* CircleButtonView.swift in Sources */,
 				564A209429224D130016C1B5 /* NetworkManager.swift in Sources */,
 				564A209E29226DD80016C1B5 /* TopMoversItemView.swift in Sources */,
 				564A20A0292281FC0016C1B5 /* AllCoinsView.swift in Sources */,
