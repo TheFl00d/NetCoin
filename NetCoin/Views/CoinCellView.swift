@@ -9,8 +9,28 @@ import SwiftUI
 import Kingfisher
 struct CoinCellView: View {
     let coin: NetCoinData
+    let showHoldingsColumn: Bool
     var body: some View {
-        HStack {
+        HStack(spacing: 0) {
+           
+            leftColumn
+            Spacer()
+            if showHoldingsColumn {
+                centerColumn
+            }
+            // coin price info
+            
+           rightColumn
+        }
+        .padding(.horizontal)
+        .padding(.vertical, 4)
+        .font(.subheadline)
+    }
+}
+
+extension CoinCellView {
+    private var leftColumn: some View {
+        HStack (spacing: 0) {
             //market cap
             Text("\(coin.marketCapRank ?? 1)")
             // image
@@ -30,31 +50,40 @@ struct CoinCellView: View {
                     .padding(.leading, 6)
             }
             .padding(.leading, 2 )
-            
-            Spacer()
-            // coin price info
-            
-            VStack(alignment: .trailing, spacing: 4) {
-                
-                Text(coin.currentPrice.toCurrency())
-                    .font(.subheadline)
-                    .fontWeight(.semibold)
-                    .padding(.leading, 4)
-                
-                Text(coin.priceChangePercentage24H.toPercentString())
-                    .font(.caption)
-                    .padding(.leading, 6)
-                    .foregroundColor(coin.priceChangePercentage24H > 0 ? .green : .red)
-            }
-            .padding(.leading, 2)
         }
-        .padding(.horizontal)
-        .padding(.vertical, 4)
+    }
+    
+    private var centerColumn: some View {
+        VStack(alignment: .trailing) {
+            Text(coin.currentHoldingsValue.toCurrency())
+                .bold()
+            Text((coin.currentHoldings ?? 0).toCurrency())
+        }
+        .foregroundColor(Color.theme.accent)
+    }
+    
+    private var rightColumn: some View {
+        VStack(alignment: .trailing, spacing: 4) {
+            
+            Text(coin.currentPrice.toCurrency())
+                .font(.subheadline)
+                .fontWeight(.semibold)
+                .padding(.leading, 4)
+            
+            Text(coin.priceChangePercentage24H.toPercentString())
+                .font(.caption)
+                .padding(.leading, 6)
+                .foregroundColor(coin.priceChangePercentage24H > 0 ? .green : .red)
+        }
+        .padding(.leading, 2)
+        .frame(width: UIScreen.main.bounds.width / 3.5, alignment: .trailing)
     }
 }
 
+
+
 //struct CoinCellView_Previews: PreviewProvider {
 //    static var previews: some View {
-//        CoinCellView()
+//        CoinCellView(coin: , showHoldingsColumn: true)
 //    }
 //}
