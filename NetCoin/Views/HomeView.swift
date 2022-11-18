@@ -15,19 +15,30 @@ struct HomeView: View {
     var body: some View {
        
             VStack {
-         homeHeader
-                
-                Spacer(minLength: 0)
-                ScrollView(.vertical, showsIndicators: false) {
-                    //top movers view
-                    TopMoversView(netCoinViewModel: netCoinViewModel)
+               
+                    homeHeader
+                if !showPortfolio {
                     
-                    Divider()
-                    //all coins view
-                    AllCoinsView(netCoinViewModel: netCoinViewModel)
+                    Spacer(minLength: 0)
+                   
+                        //top movers view
+                        TopMoversView(netCoinViewModel: netCoinViewModel)
+                        .transition(.move(edge: .leading))
+                        Divider()
+                        //all coins view
+                        
+                        AllCoinsView(netCoinViewModel: netCoinViewModel)
+                    
+                    
+                    
+                        .transition(.move(edge: .leading))
+                    
+                
                
             }
+                Spacer(minLength: 0)
         }
+        
         
     }
     
@@ -63,4 +74,5 @@ extension HomeView {
         }
         .padding(.horizontal)
     }
+    
 }

@@ -27,7 +27,8 @@ struct AllCoinsView: View {
             ScrollView {
                 VStack {
                     ForEach(netCoinViewModel.coins) { coin in
-                        CoinCellView(coin: coin, showHoldingsColumn: true)
+                        CoinCellView(coin: coin, showHoldingsColumn: false)
+                            .listRowInsets(.init(top: 10, leading: 0, bottom: 10, trailing: 0))
                     }
                 }
             }
