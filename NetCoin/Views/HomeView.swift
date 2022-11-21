@@ -27,10 +27,10 @@ struct HomeView: View {
                         Divider()
                         //all coins view
                         
-                        AllCoinsView(netCoinViewModel: netCoinViewModel)
+                    AllCoinsView(netCoinViewModel: netCoinViewModel, showPortfolio: $showPortfolio)
                     
                     
-                    
+                        .listStyle(PlainListStyle())
                         .transition(.move(edge: .leading))
                     
                 

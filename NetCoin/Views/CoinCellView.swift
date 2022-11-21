@@ -33,6 +33,7 @@ extension CoinCellView {
         HStack (spacing: 0) {
             //market cap
             Text("\(coin.marketCapRank ?? 1)")
+                .padding()
             // image
             KFImage(URL(string: coin.image))
                 .resizable()

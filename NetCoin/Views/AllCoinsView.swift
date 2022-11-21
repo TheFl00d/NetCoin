@@ -9,6 +9,7 @@ import SwiftUI
 
 struct AllCoinsView: View {
     @StateObject var netCoinViewModel: NetCoinViewModel
+    @Binding var showPortfolio: Bool
     var body: some View {
         VStack(alignment: .leading){
             Text("All Coins")
@@ -24,13 +25,16 @@ struct AllCoinsView: View {
             .foregroundColor(.gray)
             .padding(.horizontal)
             
-            ScrollView {
+        
                 VStack {
-                    ForEach(netCoinViewModel.coins) { coin in
-                        CoinCellView(coin: coin, showHoldingsColumn: false)
-                            .listRowInsets(.init(top: 10, leading: 0, bottom: 10, trailing: 0))
+                    List {
+                        ForEach(netCoinViewModel.coins) { coin in
+                            CoinCellView(coin: coin, showHoldingsColumn: showPortfolio)
+//                                .listRowInsets(.init(top: 10, leading: 0, bottom: 10, trailing: 0))
+                        }
                     }
-                }
+                    
+                
             }
         }
         
