@@ -28,14 +28,20 @@ struct HomeView: View {
                         //all coins view
                         
                     AllCoinsView(netCoinViewModel: netCoinViewModel, showPortfolio: $showPortfolio)
-                    
-                    
+        
                         .listStyle(PlainListStyle())
                         .transition(.move(edge: .leading))
                     
                 
                
             }
+                if showPortfolio{
+                    AllCoinsView(netCoinViewModel: netCoinViewModel, showPortfolio: $showPortfolio)
+        
+                        .listStyle(PlainListStyle())
+                        .transition(.move(edge: .trailing))
+                }
+              
                 Spacer(minLength: 0)
         }
         

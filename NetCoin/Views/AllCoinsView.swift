@@ -15,29 +15,38 @@ struct AllCoinsView: View {
             Text("All Coins")
                 .font(.headline)
                 .padding()
-            HStack {
-                Text("Coin")
-                Spacer()
-                Text("Prices")
-                
-            }
-            .font(.caption)
-            .foregroundColor(.gray)
-            .padding(.horizontal)
-            
+          
+            columnTitles
         
                 VStack {
                     List {
                         ForEach(netCoinViewModel.coins) { coin in
                             CoinCellView(coin: coin, showHoldingsColumn: showPortfolio)
-//                                .listRowInsets(.init(top: 10, leading: 0, bottom: 10, trailing: 0))
+                                .listRowInsets(.init(top: 10, leading: -0.10, bottom: 10, trailing: 0))
                         }
                     }
                     
+                  
                 
             }
         }
         
+    }
+    private var columnTitles: some View {
+        HStack {
+            Text("Coin")
+            Spacer()
+            if showPortfolio{
+                Text("Holdings")
+            }
+           
+            Text("Prices")
+                .frame(width: UIScreen.main.bounds.width / 3.5, alignment: .trailing)
+            
+        }
+        .font(.caption)
+        .foregroundColor(.gray)
+        .padding(.horizontal)
     }
 }
 

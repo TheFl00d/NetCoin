@@ -9,8 +9,9 @@ import Foundation
 import Combine
 
 class NetCoinViewModel: ObservableObject {
-    @Published var coins = [NetCoinData]()
-    @Published var topMovingCoins = [NetCoinData]()
+    @Published var coins: [NetCoinData] = []
+    @Published var topMovingCoins: [NetCoinData] = []
+    @Published var portfolioCoins: [NetCoinData] = []
   
     init() {
         

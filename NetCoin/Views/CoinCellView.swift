@@ -33,13 +33,14 @@ extension CoinCellView {
         HStack (spacing: 0) {
             //market cap
             Text("\(coin.marketCapRank ?? 1)")
-                .padding()
+                
             // image
             KFImage(URL(string: coin.image))
                 .resizable()
                 .scaledToFit()
                 .frame(width: 32, height: 32)
                 .foregroundColor(.orange)
+                .padding(.leading)
             //coin name info
             VStack(alignment: .leading, spacing: 4){
                 Text(coin.name)
