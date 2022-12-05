@@ -16,13 +16,24 @@ class NetCoinViewModel: ObservableObject {
     private let networkManger = NetworkManager()
     private var cancellables = Set<AnyCancellable>()
     init() {
-        
-        addCoinsSubscribers()
-        addTopMoversSubscribers()
+        Task {
+            //rename tuple
+            let (data1, data2) =  try await networkManger.fetchCoinData()
+            
+            coins = data1
+            topMovingCoins = data2
+            
+            addCoinsSubscribers()
+            addTopMoversSubscribers()
+        }
+       
+    
     }
+    
  
     func addCoinsSubscribers() {
-        networkManger.$coins.sink {
+        $coins.receive(on: DispatchQueue.main).sink {
+            
             [weak self] (returnedCoins) in
             self?.coins = returnedCoins
         }
@@ -30,7 +41,7 @@ class NetCoinViewModel: ObservableObject {
     }
     
     func addTopMoversSubscribers(){
-        networkManger.$topMovingCoins.sink {
+        $topMovingCoins.receive(on: DispatchQueue.main).sink {
             [weak self] (returnedTopCoins) in
             self?.topMovingCoins = returnedTopCoins
         }

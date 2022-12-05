@@ -10,54 +10,39 @@ import Combine
 
 
 
+protocol NetworkActions {
+    func fetchCoinData() async throws -> ([NetCoinData], [NetCoinData])
+}
 
-
-class NetworkManager {
-        @Published var coins: [NetCoinData] = []
-        @Published var topMovingCoins: [NetCoinData] = []
-        @Published var portfolioCoins: [NetCoinData] = []
-        init() {
-            
-            fetchCoinData()
-        }
-        
-        
-        
-        func fetchCoinData(){
-            guard let url = URL(string: "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=true&price_change_percentage=24h") else {
+class NetworkManager: NetworkActions   {
+    
+ 
+           
+    func fetchCoinData() async throws -> ([NetCoinData], [NetCoinData]) {
+            guard let url = URL(string: Endpoint.coinUrl) else {
                 
-                return
+                return ([],[])
                 
             }
+        do {
+            let (data,_) = try await  URLSession.shared.data(from: url)
+            
+            let netCoinData = try JSONDecoder().decode([NetCoinData].self, from: data )
+            let topMovers = configureTopMovingCoins(coins: netCoinData)
+            return (netCoinData,topMovers)
             
             
-            URLSession.shared.dataTask(with: url) { data, response, error in
-                if let error = error {
-                    print("❌DEBUG: Error \(error.localizedDescription)")
-                }
-                if let response = response as? HTTPURLResponse {
-                    print("❌DEBUG: Response code \(response.statusCode)")
-                }
-                
-                guard let data = data else {return}
-                
-                do {
-                    let coins = try JSONDecoder().decode([NetCoinData].self, from: data)
-                    DispatchQueue.main.async {
-                        self.coins = coins
-                        self.configureTopMovingCoins()
-                    }
-                    
-                } catch let error {
-                    print("❌DEBUG: Failed to decode with error:  \(error)")
-                }
-                
-            }.resume()
+        } catch {
+//           throw NetworkError.parsingFailed
             
         }
-        func configureTopMovingCoins() {
+        return ([],[])
+       
+     
+        }
+    func configureTopMovingCoins(coins: [NetCoinData]) -> [NetCoinData] {
             let topMovers = coins.sorted(by: {$0.priceChangePercentage24H > $1.priceChangePercentage24H})
-            self.topMovingCoins = Array(topMovers.prefix(8))
+            return Array(topMovers.prefix(8))
         }
         
         

@@ -13,6 +13,8 @@ struct TopMoversItemView: View {
         VStack(alignment: .leading) {
             //image
             KFImage(URL(string: coin.image))
+                .loadDiskFileSynchronously()
+                .cacheMemoryOnly()
 
                 .resizable()
                 .frame(width: 32, height: 32)

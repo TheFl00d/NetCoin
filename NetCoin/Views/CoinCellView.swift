@@ -36,6 +36,8 @@ extension CoinCellView {
                 
             // image
             KFImage(URL(string: coin.image))
+                .loadDiskFileSynchronously()
+                .cacheMemoryOnly()
                 .resizable()
                 .scaledToFit()
                 .frame(width: 32, height: 32)
