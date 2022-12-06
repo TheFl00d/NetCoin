@@ -8,7 +8,10 @@
 import Foundation
 import Combine
 
-
+enum NetworkError: Error {
+    case parsingFailed
+    case invalidUrl
+}
 
 protocol NetworkActions {
     func fetchCoinData() async throws -> ([NetCoinData], [NetCoinData])
@@ -21,7 +24,7 @@ class NetworkManager: NetworkActions   {
     func fetchCoinData() async throws -> ([NetCoinData], [NetCoinData]) {
             guard let url = URL(string: Endpoint.coinUrl) else {
                 
-                return ([],[])
+                throw NetworkError.invalidUrl
                 
             }
         do {
@@ -33,10 +36,10 @@ class NetworkManager: NetworkActions   {
             
             
         } catch {
-//           throw NetworkError.parsingFailed
+           throw NetworkError.parsingFailed
             
         }
-        return ([],[])
+    
        
      
         }

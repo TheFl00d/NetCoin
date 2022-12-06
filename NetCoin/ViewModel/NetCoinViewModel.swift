@@ -16,7 +16,6 @@ class NetCoinViewModel: ObservableObject {
     @Published var portfolioCoins: [NetCoinData] = []
     
     @Published var searchText: String = ""
-    
     private let networkManager: NetworkActions
     private var cancellables = Set<AnyCancellable>()
     init(networkManager: NetworkActions) {
@@ -51,10 +50,9 @@ class NetCoinViewModel: ObservableObject {
         
         $searchText
             .combineLatest($filteredCoins)
-//            .debounce(for: .seconds(0.5), scheduler: DispatchQueue.main)
+            .debounce(for: .seconds(0.5), scheduler: DispatchQueue.main)
             .map{ (text, filteredCoins) -> [NetCoinData] in
                 guard !text.isEmpty else {
-//                    print(self.coins)
                     return self.coins
                 }
                 let lowercasedText = text.lowercased()
@@ -69,7 +67,6 @@ class NetCoinViewModel: ObservableObject {
            .sink{
                 [weak self] (returnedCoins) in
                 self?.filteredCoins = returnedCoins
-               print(returnedCoins)
             }
             .store(in: &cancellables)
      
