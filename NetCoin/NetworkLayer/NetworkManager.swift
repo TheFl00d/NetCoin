@@ -19,14 +19,14 @@ protocol NetworkActions {
 
 class NetworkManager: NetworkActions   {
     
- 
-           
+    
+    
     func fetchCoinData() async throws -> ([NetCoinData], [NetCoinData]) {
-            guard let url = URL(string: Endpoint.coinUrl) else {
-                
-                throw NetworkError.invalidUrl
-                
-            }
+        guard let url = URL(string: Endpoint.coinUrl) else {
+            
+            throw NetworkError.invalidUrl
+            
+        }
         do {
             let (data,_) = try await  URLSession.shared.data(from: url)
             
@@ -36,25 +36,25 @@ class NetworkManager: NetworkActions   {
             
             
         } catch {
-           throw NetworkError.parsingFailed
+            throw NetworkError.parsingFailed
             
-        }
-    
-       
-     
-        }
-    func configureTopMovingCoins(coins: [NetCoinData]) -> [NetCoinData] {
-            let topMovers = coins.sorted(by: {$0.priceChangePercentage24H > $1.priceChangePercentage24H})
-            return Array(topMovers.prefix(8))
         }
         
         
         
     }
+    func configureTopMovingCoins(coins: [NetCoinData]) -> [NetCoinData] {
+        let topMovers = coins.sorted(by: {$0.priceChangePercentage24H > $1.priceChangePercentage24H})
+        return Array(topMovers.prefix(8))
+    }
     
+    
+    
+}
 
-    
-    
-    
+
+
+
+
 
 

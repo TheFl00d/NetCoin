@@ -22,17 +22,19 @@ class NetCoinViewModel: ObservableObject {
         self.networkManager = networkManager
         Task {
             //rename tuple
-            let (data1, data2) =  try await networkManager.fetchCoinData()
-            dataToPublisher(data1: data1, data2: data2)
+            let (allCoinsData, topMoversData) =  try await networkManager.fetchCoinData()
+            dataToPublisher(allCoinsData: allCoinsData, topMoversData: topMoversData)
           
         }
         
     }
     
-    func dataToPublisher(data1: [NetCoinData], data2: [NetCoinData]){
+    
+    
+    func dataToPublisher(allCoinsData: [NetCoinData], topMoversData: [NetCoinData]){
         DispatchQueue.main.async {
-            self.coins = data1
-            self.topMovingCoins = data2
+            self.coins = allCoinsData
+            self.topMovingCoins = topMoversData
             self.filteredCoins = self.coins
             self.addCoinsSubscribers()
             self.addTopMoversSubscribers()
@@ -41,12 +43,7 @@ class NetCoinViewModel: ObservableObject {
     }
     
     func addCoinsSubscribers() {
-//        $coins.receive(on: DispatchQueue.main).sink {
-//
-//            [weak self] (returnedCoins) in
-//            self?.coins = returnedCoins
-//        }
-//        .store(in: &cancellables)
+
         
         $searchText
             .combineLatest($filteredCoins)

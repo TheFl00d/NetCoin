@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		562B32EE293E4A2000EC94C7 /* SearchCoinsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562B32ED293E4A2000EC94C7 /* SearchCoinsView.swift */; };
 		562B32F0293E4F2100EC94C7 /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562B32EF293E4F2100EC94C7 /* UIApplication.swift */; };
+		562B32F2293F919C00EC94C7 /* NetCoinViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562B32F1293F919C00EC94C7 /* NetCoinViewModelTest.swift */; };
+		562B32F4293F94F500EC94C7 /* NetCoinResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 562B32F3293F94F500EC94C7 /* NetCoinResponse.json */; };
+		562B32F6293F953B00EC94C7 /* FakeNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562B32F5293F953B00EC94C7 /* FakeNetworkManager.swift */; };
+		562B32F8293F9B6700EC94C7 /* DoubleTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562B32F7293F9B6700EC94C7 /* DoubleTest.swift */; };
 		564A206529224B9E0016C1B5 /* NetCoinApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564A206429224B9E0016C1B5 /* NetCoinApp.swift */; };
 		564A206729224B9E0016C1B5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564A206629224B9E0016C1B5 /* ContentView.swift */; };
 		564A206929224B9F0016C1B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 564A206829224B9F0016C1B5 /* Assets.xcassets */; };
@@ -54,6 +58,10 @@
 /* Begin PBXFileReference section */
 		562B32ED293E4A2000EC94C7 /* SearchCoinsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCoinsView.swift; sourceTree = "<group>"; };
 		562B32EF293E4F2100EC94C7 /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
+		562B32F1293F919C00EC94C7 /* NetCoinViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetCoinViewModelTest.swift; sourceTree = "<group>"; };
+		562B32F3293F94F500EC94C7 /* NetCoinResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = NetCoinResponse.json; sourceTree = "<group>"; };
+		562B32F5293F953B00EC94C7 /* FakeNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeNetworkManager.swift; sourceTree = "<group>"; };
+		562B32F7293F9B6700EC94C7 /* DoubleTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleTest.swift; sourceTree = "<group>"; };
 		564A206129224B9E0016C1B5 /* NetCoin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetCoin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		564A206429224B9E0016C1B5 /* NetCoinApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetCoinApp.swift; sourceTree = "<group>"; };
 		564A206629224B9E0016C1B5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -154,7 +162,11 @@
 		564A207929224B9F0016C1B5 /* NetCoinTests */ = {
 			isa = PBXGroup;
 			children = (
+				562B32F1293F919C00EC94C7 /* NetCoinViewModelTest.swift */,
 				564A207A29224B9F0016C1B5 /* NetCoinTests.swift */,
+				562B32F5293F953B00EC94C7 /* FakeNetworkManager.swift */,
+				562B32F3293F94F500EC94C7 /* NetCoinResponse.json */,
+				562B32F7293F9B6700EC94C7 /* DoubleTest.swift */,
 			);
 			path = NetCoinTests;
 			sourceTree = "<group>";
@@ -339,6 +351,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				562B32F4293F94F500EC94C7 /* NetCoinResponse.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -383,6 +396,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				564A207B29224B9F0016C1B5 /* NetCoinTests.swift in Sources */,
+				562B32F2293F919C00EC94C7 /* NetCoinViewModelTest.swift in Sources */,
+				562B32F8293F9B6700EC94C7 /* DoubleTest.swift in Sources */,
+				562B32F6293F953B00EC94C7 /* FakeNetworkManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

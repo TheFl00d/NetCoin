@@ -3,4 +3,378 @@
    uuid = "C57B1A75-8F54-4DC7-B2B6-5BDEB0B5D5E8"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E709F75F-D6E7-410D-A831-638525E6641C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NetCoinTests/FakeNetworkManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "fetchCoinData()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "E709F75F-D6E7-410D-A831-638525E6641C - 129b3c8ec174c42"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for NetCoinTests.FakeManager.fetchCoinData() async throws -&gt; (Swift.Array&lt;NetCoin.NetCoinData&gt;, Swift.Array&lt;NetCoin.NetCoinData&gt;)"
+                  moduleName = "NetCoinTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kwabenaankamah/Desktop/NetCoin/NetCoinTests/FakeNetworkManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "1124">
+               </Location>
+               <Location
+                  uuid = "E709F75F-D6E7-410D-A831-638525E6641C - 129b3c8ec174c42"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for NetCoinTests.FakeManager.fetchCoinData() async throws -&gt; (Swift.Array&lt;NetCoin.NetCoinData&gt;, Swift.Array&lt;NetCoin.NetCoinData&gt;)"
+                  moduleName = "NetCoinTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kwabenaankamah/Desktop/NetCoin/NetCoinTests/FakeNetworkManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "1156">
+               </Location>
+               <Location
+                  uuid = "E709F75F-D6E7-410D-A831-638525E6641C - 129b3c8ec174c04"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for NetCoinTests.FakeManager.fetchCoinData() async throws -&gt; (Swift.Array&lt;NetCoin.NetCoinData&gt;, Swift.Array&lt;NetCoin.NetCoinData&gt;)"
+                  moduleName = "NetCoinTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kwabenaankamah/Desktop/NetCoin/NetCoinTests/FakeNetworkManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "948">
+               </Location>
+               <Location
+                  uuid = "E709F75F-D6E7-410D-A831-638525E6641C - 129b3c8ec174dc6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for NetCoinTests.FakeManager.fetchCoinData() async throws -&gt; (Swift.Array&lt;NetCoin.NetCoinData&gt;, Swift.Array&lt;NetCoin.NetCoinData&gt;)"
+                  moduleName = "NetCoinTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kwabenaankamah/Desktop/NetCoin/NetCoinTests/FakeNetworkManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "948">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FE76401D-B80C-438D-BBFB-B5F5067AF6B5"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NetCoinTests/NetCoinTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "testAsyncRequestAllCoinsData()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "FE76401D-B80C-438D-BBFB-B5F5067AF6B5 - 7660468731f209f8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for closure #1 @Sendable () async -&gt; () in NetCoinTests.NetCoinTests.testAsyncRequest() -&gt; ()"
+                  moduleName = "NetCoinTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kwabenaankamah/Desktop/NetCoin/NetCoinTests/NetCoinTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "72">
+               </Location>
+               <Location
+                  uuid = "FE76401D-B80C-438D-BBFB-B5F5067AF6B5 - bb6911d5649353f5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for closure #1 @Sendable () async -&gt; () in NetCoinTests.NetCoinTests.testAsyncRequest() -&gt; ()"
+                  moduleName = "NetCoinTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kwabenaankamah/Desktop/NetCoin/NetCoinTests/NetCoinTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "44">
+               </Location>
+               <Location
+                  uuid = "FE76401D-B80C-438D-BBFB-B5F5067AF6B5 - cf9d7afd276fddf2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async -&gt; () in NetCoinTests.NetCoinTests.testAsyncRequest() -&gt; ()"
+                  moduleName = "NetCoinTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kwabenaankamah/Desktop/NetCoin/NetCoinTests/NetCoinTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "76">
+               </Location>
+               <Location
+                  uuid = "FE76401D-B80C-438D-BBFB-B5F5067AF6B5 - 328f5281fa1c7f7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for closure #1 @Sendable () async -&gt; () in NetCoinTests.NetCoinTests.testAsyncRequest() -&gt; ()"
+                  moduleName = "NetCoinTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kwabenaankamah/Desktop/NetCoin/NetCoinTests/NetCoinTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "44">
+               </Location>
+               <Location
+                  uuid = "FE76401D-B80C-438D-BBFB-B5F5067AF6B5 - 77f72051f5ddc55a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for closure #1 @Sendable () async -&gt; () in NetCoinTests.NetCoinTests.testAsyncRequestAllCoinsData() -&gt; ()"
+                  moduleName = "NetCoinTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kwabenaankamah/Desktop/NetCoin/NetCoinTests/NetCoinTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "72">
+               </Location>
+               <Location
+                  uuid = "FE76401D-B80C-438D-BBFB-B5F5067AF6B5 - 755e842c6de9bd0b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for closure #1 @Sendable () async -&gt; () in NetCoinTests.NetCoinTests.testAsyncRequestAllCoinsData() -&gt; ()"
+                  moduleName = "NetCoinTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kwabenaankamah/Desktop/NetCoin/NetCoinTests/NetCoinTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "44">
+               </Location>
+               <Location
+                  uuid = "FE76401D-B80C-438D-BBFB-B5F5067AF6B5 - be22c7c9c784c15c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async -&gt; () in NetCoinTests.NetCoinTests.testAsyncRequestAllCoinsData() -&gt; ()"
+                  moduleName = "NetCoinTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kwabenaankamah/Desktop/NetCoin/NetCoinTests/NetCoinTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "48">
+               </Location>
+               <Location
+                  uuid = "FE76401D-B80C-438D-BBFB-B5F5067AF6B5 - 5a4b3b75af574f5d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for closure #1 @Sendable () async -&gt; () in NetCoinTests.NetCoinTests.testAsyncRequestAllCoinsData() -&gt; ()"
+                  moduleName = "NetCoinTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kwabenaankamah/Desktop/NetCoin/NetCoinTests/NetCoinTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "92">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "28112920-DF8C-48DA-A153-DD683BC1A9E0"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NetCoinTests/FakeNetworkManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "fetchCoinData()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "28112920-DF8C-48DA-A153-DD683BC1A9E0 - 129b3c8ec174d1d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for NetCoinTests.FakeManager.fetchCoinData() async throws -&gt; (Swift.Array&lt;NetCoin.NetCoinData&gt;, Swift.Array&lt;NetCoin.NetCoinData&gt;)"
+                  moduleName = "NetCoinTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kwabenaankamah/Desktop/NetCoin/NetCoinTests/FakeNetworkManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "1060">
+               </Location>
+               <Location
+                  uuid = "28112920-DF8C-48DA-A153-DD683BC1A9E0 - 129b3c8ec174d1d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for NetCoinTests.FakeManager.fetchCoinData() async throws -&gt; (Swift.Array&lt;NetCoin.NetCoinData&gt;, Swift.Array&lt;NetCoin.NetCoinData&gt;)"
+                  moduleName = "NetCoinTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kwabenaankamah/Desktop/NetCoin/NetCoinTests/FakeNetworkManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "212">
+               </Location>
+               <Location
+                  uuid = "28112920-DF8C-48DA-A153-DD683BC1A9E0 - 129b3c8ec174d1d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for NetCoinTests.FakeManager.fetchCoinData() async throws -&gt; (Swift.Array&lt;NetCoin.NetCoinData&gt;, Swift.Array&lt;NetCoin.NetCoinData&gt;)"
+                  moduleName = "NetCoinTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kwabenaankamah/Desktop/NetCoin/NetCoinTests/FakeNetworkManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "424">
+               </Location>
+               <Location
+                  uuid = "28112920-DF8C-48DA-A153-DD683BC1A9E0 - 129b3c8ec1742df"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for NetCoinTests.FakeManager.fetchCoinData() async throws -&gt; (Swift.Array&lt;NetCoin.NetCoinData&gt;, Swift.Array&lt;NetCoin.NetCoinData&gt;)"
+                  moduleName = "NetCoinTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kwabenaankamah/Desktop/NetCoin/NetCoinTests/FakeNetworkManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "212">
+               </Location>
+               <Location
+                  uuid = "28112920-DF8C-48DA-A153-DD683BC1A9E0 - 129b3c8ec1742df"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for NetCoinTests.FakeManager.fetchCoinData() async throws -&gt; (Swift.Array&lt;NetCoin.NetCoinData&gt;, Swift.Array&lt;NetCoin.NetCoinData&gt;)"
+                  moduleName = "NetCoinTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kwabenaankamah/Desktop/NetCoin/NetCoinTests/FakeNetworkManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "424">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E942084A-36F8-496C-A1EB-F98C4ED1C9D3"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NetCoinTests/FakeNetworkManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "fetchCoinData()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "E942084A-36F8-496C-A1EB-F98C4ED1C9D3 - 129b3c8ec174d5b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for NetCoinTests.FakeManager.fetchCoinData() async throws -&gt; (Swift.Array&lt;NetCoin.NetCoinData&gt;, Swift.Array&lt;NetCoin.NetCoinData&gt;)"
+                  moduleName = "NetCoinTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kwabenaankamah/Desktop/NetCoin/NetCoinTests/FakeNetworkManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "636">
+               </Location>
+               <Location
+                  uuid = "E942084A-36F8-496C-A1EB-F98C4ED1C9D3 - 129b3c8ec174d3a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for NetCoinTests.FakeManager.fetchCoinData() async throws -&gt; (Swift.Array&lt;NetCoin.NetCoinData&gt;, Swift.Array&lt;NetCoin.NetCoinData&gt;)"
+                  moduleName = "NetCoinTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kwabenaankamah/Desktop/NetCoin/NetCoinTests/FakeNetworkManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "1100">
+               </Location>
+               <Location
+                  uuid = "E942084A-36F8-496C-A1EB-F98C4ED1C9D3 - 129b3c8ec1742fc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for NetCoinTests.FakeManager.fetchCoinData() async throws -&gt; (Swift.Array&lt;NetCoin.NetCoinData&gt;, Swift.Array&lt;NetCoin.NetCoinData&gt;)"
+                  moduleName = "NetCoinTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kwabenaankamah/Desktop/NetCoin/NetCoinTests/FakeNetworkManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "1100">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

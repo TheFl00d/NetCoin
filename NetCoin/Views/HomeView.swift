@@ -11,39 +11,39 @@ struct HomeView: View {
     @StateObject var netCoinViewModel:  NetCoinViewModel
     
     @State private var showPortfolio: Bool = false
-   
+    
     var body: some View {
-       
-            VStack {
-               
-                    homeHeader
-                if !showPortfolio {
-                    
-                    Spacer(minLength: 0)
-                   
-                        //top movers view
-                        TopMoversView(netCoinViewModel: netCoinViewModel)
-                        .transition(.move(edge: .leading))
-                 
-                        Divider()
-                        //all coins view
-                    SearchCoinsView(searchText:  $netCoinViewModel.searchText)
-                    AllCoinsView(netCoinViewModel: netCoinViewModel, showPortfolio: $showPortfolio)
         
-                        .listStyle(PlainListStyle())
-                        .transition(.move(edge: .leading))
-                    
+        VStack {
+            
+            homeHeader
+            if !showPortfolio {
                 
-               
-            }
-                if showPortfolio{
-                    AllCoinsView(netCoinViewModel: netCoinViewModel, showPortfolio: $showPortfolio)
-        
-                        .listStyle(PlainListStyle())
-                        .transition(.move(edge: .trailing))
-                }
-              
                 Spacer(minLength: 0)
+                
+                //top movers view
+                TopMoversView(netCoinViewModel: netCoinViewModel)
+                    .transition(.move(edge: .leading))
+                
+                Divider()
+                //all coins view
+                SearchCoinsView(searchText:  $netCoinViewModel.searchText)
+                AllCoinsView(netCoinViewModel: netCoinViewModel, showPortfolio: $showPortfolio)
+                
+                    .listStyle(PlainListStyle())
+                    .transition(.move(edge: .leading))
+                
+                
+                
+            }
+            if showPortfolio{
+                AllCoinsView(netCoinViewModel: netCoinViewModel, showPortfolio: $showPortfolio)
+                
+                    .listStyle(PlainListStyle())
+                    .transition(.move(edge: .trailing))
+            }
+            
+            Spacer(minLength: 0)
         }
         
         
@@ -56,7 +56,6 @@ struct HomeView_Previews: PreviewProvider {
         HomeView(netCoinViewModel: NetCoinViewModel(networkManager: NetworkManager()))
     }
 }
-
 extension HomeView {
     
     private var homeHeader: some View {
