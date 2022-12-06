@@ -12,7 +12,7 @@ struct ContentView: View {
    
 
     var body: some View {
-        HomeView(netCoinViewModel: NetCoinViewModel())
+        HomeView(netCoinViewModel: NetCoinViewModel(networkManager: NetworkManager()))
        
     }
 

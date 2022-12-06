@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct HomeView: View {
-    @StateObject var netCoinViewModel = NetCoinViewModel()
+    @StateObject var netCoinViewModel:  NetCoinViewModel
     
     @State private var showPortfolio: Bool = false
    
@@ -24,9 +24,10 @@ struct HomeView: View {
                         //top movers view
                         TopMoversView(netCoinViewModel: netCoinViewModel)
                         .transition(.move(edge: .leading))
+                 
                         Divider()
                         //all coins view
-                        
+                    SearchCoinsView(searchText:  $netCoinViewModel.searchText)
                     AllCoinsView(netCoinViewModel: netCoinViewModel, showPortfolio: $showPortfolio)
         
                         .listStyle(PlainListStyle())
@@ -52,7 +53,7 @@ struct HomeView: View {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView(netCoinViewModel: NetCoinViewModel())
+        HomeView(netCoinViewModel: NetCoinViewModel(networkManager: NetworkManager()))
     }
 }
 

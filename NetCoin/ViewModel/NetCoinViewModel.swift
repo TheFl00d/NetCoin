@@ -8,36 +8,71 @@
 import Foundation
 import Combine
 
+
 class NetCoinViewModel: ObservableObject {
     @Published var coins: [NetCoinData] = []
+    @Published var filteredCoins: [NetCoinData] = []
     @Published var topMovingCoins: [NetCoinData] = []
     @Published var portfolioCoins: [NetCoinData] = []
     
-    private let networkManger = NetworkManager()
+    @Published var searchText: String = ""
+    
+    private let networkManager: NetworkActions
     private var cancellables = Set<AnyCancellable>()
-    init() {
+    init(networkManager: NetworkActions) {
+        self.networkManager = networkManager
         Task {
             //rename tuple
-            let (data1, data2) =  try await networkManger.fetchCoinData()
-            
-            coins = data1
-            topMovingCoins = data2
-            
-            addCoinsSubscribers()
-            addTopMoversSubscribers()
+            let (data1, data2) =  try await networkManager.fetchCoinData()
+            dataToPublisher(data1: data1, data2: data2)
+          
         }
-       
-    
+        
     }
     
- 
-    func addCoinsSubscribers() {
-        $coins.receive(on: DispatchQueue.main).sink {
-            
-            [weak self] (returnedCoins) in
-            self?.coins = returnedCoins
+    func dataToPublisher(data1: [NetCoinData], data2: [NetCoinData]){
+        DispatchQueue.main.async {
+            self.coins = data1
+            self.topMovingCoins = data2
+            self.filteredCoins = self.coins
+            self.addCoinsSubscribers()
+            self.addTopMoversSubscribers()
         }
-        .store(in: &cancellables)
+        
+    }
+    
+    func addCoinsSubscribers() {
+//        $coins.receive(on: DispatchQueue.main).sink {
+//
+//            [weak self] (returnedCoins) in
+//            self?.coins = returnedCoins
+//        }
+//        .store(in: &cancellables)
+        
+        $searchText
+            .combineLatest($filteredCoins)
+//            .debounce(for: .seconds(0.5), scheduler: DispatchQueue.main)
+            .map{ (text, filteredCoins) -> [NetCoinData] in
+                guard !text.isEmpty else {
+//                    print(self.coins)
+                    return self.coins
+                }
+                let lowercasedText = text.lowercased()
+                
+                return filteredCoins.filter{(coin) -> Bool in
+                    return coin.name.lowercased().contains(lowercasedText) ||
+                    coin.symbol.lowercased().contains(lowercasedText) ||
+                    coin.id.lowercased().contains(lowercasedText)
+                }
+                
+            }
+           .sink{
+                [weak self] (returnedCoins) in
+                self?.filteredCoins = returnedCoins
+               print(returnedCoins)
+            }
+            .store(in: &cancellables)
+     
     }
     
     func addTopMoversSubscribers(){
@@ -47,12 +82,17 @@ class NetCoinViewModel: ObservableObject {
         }
         .store(in: &cancellables)
     }
-    
 }
-    
    
 
     
+    
+    
+
+
+    
+ 
+   
     
     
 

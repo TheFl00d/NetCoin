@@ -20,7 +20,8 @@ struct AllCoinsView: View {
         
                 VStack {
                     List {
-                        ForEach(netCoinViewModel.coins) { coin in
+                        //possible if statement here
+                        ForEach(netCoinViewModel.filteredCoins) { coin in
                             CoinCellView(coin: coin, showHoldingsColumn: showPortfolio)
                                 .listRowInsets(.init(top: 10, leading: -0.10, bottom: 10, trailing: 0))
                         }
