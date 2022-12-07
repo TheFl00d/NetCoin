@@ -1,73 +1,20 @@
+//
+//  NetCoinTests.swift
+//  NetCoinTests
+//
+//  Created by Kwabena Ankamah on 14/11/2022.
+//
 
 import XCTest
 @testable import NetCoin
 
 final class NetCoinTests: XCTestCase {
-    let networkManager = FakeManager()
-    var netCoinViewModel : NetCoinViewModel!
-    var endPoint = Endpoint()
-    
-    
     override func setUpWithError() throws {
-        
-        netCoinViewModel = NetCoinViewModel(networkManager: networkManager)
+        // Put setup code here. This method is called before the invocation of each test method in the class.
     }
-    
-    func testAsyncRequestAllCoinsData(){
-        
-        Task {
-            do{
-                var coinRequest = try await networkManager.fetchCoinData()
-                
-                
-                XCTAssertEqual(coinRequest.0.count, 1 )
-            } catch {
-                print("❌\(error)")
-                fatalError("Failed to return json")
-            }
-        }
-        
+
+    override func tearDownWithError() throws {
+        // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
-    func testAsyncRequestTopMoversData(){
-        Task {
-            do{
-                let coinRequest = try await networkManager.fetchCoinData()
-                XCTAssertEqual(coinRequest.1.count, 1 )
-            } catch {
-                
-                print("❌\(error)")
-                fatalError("Failed to return json")
-            }
-        }
-        
-    }
-    func testAsyncRequestAllCoinsValues(){
-        Task {
-            do{
-                let coinRequest = try await networkManager.fetchCoinData()
-                _ = "bitcoin"
-                XCTAssertEqual(coinRequest.0[0].name, "bitcoin" )
-            } catch {
-                
-                print("❌\(error)")
-                fatalError("Failed to return json")
-            }
-        }
-        
-    }
-    
-    func testAsyncRequestTopMoverValues(){
-        Task {
-            do{
-                let coinRequest = try await networkManager.fetchCoinData()
-                let percentageChange = coinRequest.1[0].priceChangePercentage24H
-                XCTAssertEqual(percentageChange, -0.62665 )
-            } catch {
-                
-                print("❌\(error)")
-                fatalError("Failed to return json")
-            }
-        }
-        
-    }
+
 }
