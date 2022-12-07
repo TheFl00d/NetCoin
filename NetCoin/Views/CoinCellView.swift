@@ -1,9 +1,3 @@
-//
-//  CoinCellView.swift
-//  NetCoin
-//
-//  Created by Kwabena Ankamah on 14/11/2022.
-//
 
 import SwiftUI
 import Kingfisher
@@ -83,11 +77,3 @@ extension CoinCellView {
         .frame(width: UIScreen.main.bounds.width / 3.5, alignment: .trailing)
     }
 }
-
-
-
-//struct CoinCellView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        CoinCellView(coin: , showHoldingsColumn: true)
-//    }
-//}

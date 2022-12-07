@@ -1,9 +1,3 @@
-//
-//  SearchCoinsView.swift
-//  NetCoin
-//
-//  Created by Kwabena Ankamah on 05/12/2022.
-//
 
 import SwiftUI
 
@@ -50,8 +44,3 @@ extension SearchCoinsView {
         }
     }
 }
-//struct SearchCoins_Previews: PreviewProvider {
-//    static var previews: some View {
-//        SearchCoins()
-//    }
-//}

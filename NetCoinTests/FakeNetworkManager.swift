@@ -1,10 +1,3 @@
-//
-//  FakeNetworkManager.swift
-//  NetCoinTests
-//
-//  Created by Kwabena Ankamah on 06/12/2022.
-//
-
 
 import Foundation
 @testable import NetCoin

@@ -1,9 +1,3 @@
-//
-//  AllCoinsView.swift
-//  NetCoin
-//
-//  Created by Kwabena Ankamah on 14/11/2022.
-//
 
 import SwiftUI
 
@@ -26,12 +20,8 @@ struct AllCoinsView: View {
                                 .listRowInsets(.init(top: 10, leading: -0.10, bottom: 10, trailing: 0))
                         }
                     }
-                    
-                  
-                
             }
         }
-        
     }
     private var columnTitles: some View {
         HStack {
@@ -51,8 +41,3 @@ struct AllCoinsView: View {
     }
 }
 
-//struct AllCoinsView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        AllCoinsView()
-//    }
-//}

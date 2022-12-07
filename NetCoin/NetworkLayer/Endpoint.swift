@@ -1,9 +1,3 @@
-//
-//  Endpoint.swift
-//  NetCoin
-//
-//  Created by Kwabena Ankamah on 15/11/2022.
-//
 
 import Foundation
 struct Endpoint {

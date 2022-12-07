@@ -1,9 +1,3 @@
-//
-//  NetCoinTests.swift
-//  NetCoinTests
-//
-//  Created by Kwabena Ankamah on 14/11/2022.
-//
 
 import XCTest
 @testable import NetCoin

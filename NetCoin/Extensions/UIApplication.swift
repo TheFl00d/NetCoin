@@ -1,9 +1,3 @@
-//
-//  UIApplication.swift
-//  NetCoin
-//
-//  Created by Kwabena Ankamah on 05/12/2022.
-//
 
 import Foundation
 import SwiftUI

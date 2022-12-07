@@ -14,8 +14,8 @@
             filePath = "NetCoinTests/FakeNetworkManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
             landmarkName = "fetchCoinData()"
             landmarkType = "7">
             <Locations>
@@ -92,9 +92,9 @@
             filePath = "NetCoinTests/NetCoinTests.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
-            landmarkName = "testAsyncRequestAllCoinsData()"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "setUpWithError()"
             landmarkType = "7">
             <Locations>
                <Location
@@ -230,10 +230,10 @@
             filePath = "NetCoinTests/FakeNetworkManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "21"
-            endingLineNumber = "21"
-            landmarkName = "fetchCoinData()"
-            landmarkType = "7">
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "unknown"
+            landmarkType = "0">
             <Locations>
                <Location
                   uuid = "28112920-DF8C-48DA-A153-DD683BC1A9E0 - 129b3c8ec174d1d"
@@ -323,10 +323,10 @@
             filePath = "NetCoinTests/FakeNetworkManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "22"
-            endingLineNumber = "22"
-            landmarkName = "fetchCoinData()"
-            landmarkType = "7">
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "FakeManager"
+            landmarkType = "3">
             <Locations>
                <Location
                   uuid = "E942084A-36F8-496C-A1EB-F98C4ED1C9D3 - 129b3c8ec174d5b"

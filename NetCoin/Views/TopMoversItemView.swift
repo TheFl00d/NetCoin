@@ -1,9 +1,3 @@
-//
-//  TopMoversItemView.swift
-//  NetCoin
-//
-//  Created by Kwabena Ankamah on 14/11/2022.
-//
 
 import SwiftUI
 import Kingfisher
@@ -43,9 +37,4 @@ struct TopMoversItemView: View {
                    ))
     }
 }
-//
-//struct TopMoversItemView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        TopMoversItemView()
-//    }
-//}
+
