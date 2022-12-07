@@ -33,3 +33,6 @@ The "+" option in the top left corner will allow the user to add more coins to t
 
 This search feature allows the user to filter the list by name or symbol
 The All coins list response dynamically to search bar input values
+
+## Summary 
+I wrote his application in a few hours there is a lot more functionality I would have liked to add for example the user portfolio and info features. 
