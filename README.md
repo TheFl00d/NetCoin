@@ -8,7 +8,9 @@ Api data is fetched using an Async await method that returns a tuple of arrays.
 
 ## Home Screen
 On the start of app you should see this screen:
+
 ![MacDown Screenshot](https://snipboard.io/DwTXqH.jpg)
+
 ## Top Movers 
 Shows a scrollable list of the top 8 coin the have the highest price percentage increase over the past 24hr
 
@@ -19,11 +21,14 @@ On the right is an icon that will display user account information including sig
 
 ## Portfolio Screen
 Portfolio should look like this: 
+
 ![MacDown Screenshot](https://snipboard.io/7o0Q4T.jpg)
+
 This screen allows the user to view a list of personally select coins or personal coin portfolio.
 The "+" option in the top left corner will allow the user to add more coins to their portfolio list
 
 ## Search Bar
+
 ![MacDown Screenshot](https://snipboard.io/dXLgcS.jpg)
 
 This search feature allows the user to filter the list by name or symbol
