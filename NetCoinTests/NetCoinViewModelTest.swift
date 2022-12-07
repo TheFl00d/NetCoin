@@ -15,10 +15,10 @@ final class NetCoinViewModelTest: XCTestCase {
     }
     
     func testAsyncRequestAllCoinsData(){
-        
+       
         Task {
             do{
-                var coinRequest = try await networkManager.fetchCoinData()
+                let coinRequest = try await networkManager.fetchCoinData()
                 
                 
                 XCTAssertEqual(coinRequest.0.count, 1 )
@@ -46,7 +46,7 @@ final class NetCoinViewModelTest: XCTestCase {
         Task {
             do{
                 let coinRequest = try await networkManager.fetchCoinData()
-                _ = "bitcoin"
+                
                 XCTAssertEqual(coinRequest.0[0].name, "bitcoin" )
             } catch {
                 
