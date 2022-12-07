@@ -1,9 +1,3 @@
-//
-//  NetCoinData.swift
-//  NetCoin
-//
-//  Created by Kwabena Ankamah on 14/11/2022.
-//
 
 import Foundation
 
@@ -60,12 +54,7 @@ struct NetCoinData: Codable, Identifiable {
     
     var currentHoldingsValue: Double {
         return (currentHoldings ?? 0) * currentPrice
-    }
-    
-//    var rank: Int {
-//        return Int(marketCapRank ?? 0)
-//    }
-  
+    }  
 }
 
 struct SparklineIn7D: Codable {

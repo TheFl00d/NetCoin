@@ -1,9 +1,3 @@
-//
-//  HomeView.swift
-//  NetCoin
-//
-//  Created by Kwabena Ankamah on 14/11/2022.
-//
 
 import SwiftUI
 
@@ -32,9 +26,7 @@ struct HomeView: View {
                 
                     .listStyle(PlainListStyle())
                     .transition(.move(edge: .leading))
-                
-                
-                
+             
             }
             if showPortfolio{
                 AllCoinsView(netCoinViewModel: netCoinViewModel, showPortfolio: $showPortfolio)
@@ -60,7 +52,7 @@ extension HomeView {
     
     private var homeHeader: some View {
         HStack{
-            CircleButtonView(iconName: showPortfolio ? "plus" : "info")
+            CircleButtonView(iconName: showPortfolio ? "plus" : "person.fill")
                 .animation(.none)
                 .background(CircleButtonAnimationVIew(animate: $showPortfolio))
             Spacer()
@@ -80,5 +72,4 @@ extension HomeView {
         }
         .padding(.horizontal)
     }
-    
 }

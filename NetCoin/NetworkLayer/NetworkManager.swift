@@ -1,9 +1,3 @@
-//
-//  NetworkManager.swift
-//  NetCoin
-//
-//  Created by Kwabena Ankamah on 14/11/2022.
-//
 
 import Foundation
 import Combine
@@ -18,9 +12,7 @@ protocol NetworkActions {
 }
 
 class NetworkManager: NetworkActions   {
-    
-    
-    
+
     func fetchCoinData() async throws -> ([NetCoinData], [NetCoinData]) {
         guard let url = URL(string: Endpoint.coinUrl) else {
             
@@ -37,19 +29,13 @@ class NetworkManager: NetworkActions   {
             
         } catch {
             throw NetworkError.parsingFailed
-            
+        
         }
-        
-        
-        
     }
     func configureTopMovingCoins(coins: [NetCoinData]) -> [NetCoinData] {
         let topMovers = coins.sorted(by: {$0.priceChangePercentage24H > $1.priceChangePercentage24H})
         return Array(topMovers.prefix(8))
     }
-    
-    
-    
 }
 
 

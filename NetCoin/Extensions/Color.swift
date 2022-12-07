@@ -1,9 +1,3 @@
-//
-//  Color.swift
-//  NetCoin
-//
-//  Created by Kwabena Ankamah on 17/11/2022.
-//
 
 import Foundation
 import SwiftUI

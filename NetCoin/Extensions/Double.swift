@@ -1,9 +1,3 @@
-//
-//  Double.swift
-//  NetCoin
-//
-//  Created by Kwabena Ankamah on 16/11/2022.
-//
 
 import Foundation
 

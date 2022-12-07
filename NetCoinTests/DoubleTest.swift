@@ -1,9 +1,3 @@
-//
-//  DoubleTest.swift
-//  NetCoinTests
-//
-//  Created by Kwabena Ankamah on 06/12/2022.
-//
 
 import XCTest
 @testable import NetCoin
@@ -37,7 +31,6 @@ final class DoubleTest: XCTestCase {
     func testPercentageRoundDown(){
         let num3 = -0.621
         var convertedNum3 = num3.toPercentString()
-        print(convertedNum3)
         XCTAssertEqual(convertedNum3, "-0.62%")
     }
     func testConvertDoubleToString(){
