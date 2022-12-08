@@ -6,38 +6,25 @@ struct NetCoinData: Codable, Identifiable {
     let image: String
     let currentPrice: Double
     let marketCapRank: Int?
-    let marketCap, fullyDilutedValuation : Double?
-    let totalVolume, high24H, low24H: Double?
+    let high24H, low24H: Double?
     let priceChange24H, priceChangePercentage24H: Double
-    let marketCapChange24H, marketCapChangePercentage24H: Double?
-    let circulatingSupply, totalSupply, maxSupply: Double?
-    let lastUpdated: String?
     let priceChangePercentage24HInCurrency: Double?
     let currentHoldings: Double?
 
     enum CodingKeys: String, CodingKey {
         case id, symbol, name, image
         case currentPrice = "current_price"
-        case marketCap = "market_cap"
         case marketCapRank = "market_cap_rank"
-        case fullyDilutedValuation = "fully_diluted_valuation"
-        case totalVolume = "total_volume"
         case high24H = "high_24h"
         case low24H = "low_24h"
         case priceChange24H = "price_change_24h"
         case priceChangePercentage24H = "price_change_percentage_24h"
-        case marketCapChange24H = "market_cap_change_24h"
-        case marketCapChangePercentage24H = "market_cap_change_percentage_24h"
-        case circulatingSupply = "circulating_supply"
-        case totalSupply = "total_supply"
-        case maxSupply = "max_supply"
-        case lastUpdated = "last_updated"
         case priceChangePercentage24HInCurrency = "price_change_percentage_24h_in_currency"
         case currentHoldings
     }
     
     func updateHoldings(amount: Double) -> NetCoinData {
-        return NetCoinData(id: id, symbol: symbol, name: name, image: image, currentPrice: currentPrice, marketCapRank: marketCapRank, marketCap: marketCap, fullyDilutedValuation: fullyDilutedValuation, totalVolume: totalVolume, high24H: high24H, low24H: low24H, priceChange24H: priceChange24H, priceChangePercentage24H: priceChangePercentage24H, marketCapChange24H: marketCapChange24H, marketCapChangePercentage24H: marketCapChangePercentage24H, circulatingSupply: circulatingSupply, totalSupply: totalSupply, maxSupply: maxSupply, lastUpdated: lastUpdated, priceChangePercentage24HInCurrency: priceChangePercentage24HInCurrency, currentHoldings: amount)
+        return NetCoinData(id: id, symbol: symbol, name: name, image: image, currentPrice: currentPrice, marketCapRank: marketCapRank, high24H: high24H, low24H: low24H, priceChange24H: priceChange24H, priceChangePercentage24H: priceChangePercentage24H, priceChangePercentage24HInCurrency: priceChangePercentage24HInCurrency, currentHoldings: amount)
     }
     
     var currentHoldingsValue: Double {
