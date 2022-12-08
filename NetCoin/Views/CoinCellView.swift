@@ -11,8 +11,6 @@ struct CoinCellView: View {
             if showHoldingsColumn {
                 centerColumn
             }
-            // coin price info
-            
            rightColumn
         }
         .padding(.horizontal)
@@ -23,22 +21,15 @@ struct CoinCellView: View {
 extension CoinCellView {
     private var leftColumn: some View {
         HStack (spacing: 0) {
-            //market cap
             Text("\(coin.marketCapRank ?? 1)")
-            // image
-//             AsyncImage(url: URL(string: coin.image))
-//
+  
             AsyncImage(url: URL(string: coin.image)) { image in
                 image.resizable()
             } placeholder: {
                 ProgressView()
             }
-            .frame(width: 32, height: 32)
-//                .scaledToFit()
-//                .frame(width: 32, height: 32)
-//                .foregroundColor(.orange)
-//                .padding(.leading)
-            //coin name info
+            .frame(width: 20, height: 20)
+
             VStack(alignment: .leading, spacing: 4){
                 Text(coin.name)
                     .font(.subheadline)

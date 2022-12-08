@@ -31,7 +31,6 @@ extension SearchCoinsView {
                     .foregroundColor(Color.theme.accent)
                     .opacity(searchText.isEmpty ? 0.0 : 1.0)
                     .onTapGesture {
-                        //close keyboard on click of close button
                         UIApplication.shared.closeEdit()
                         searchText = ""
                     }
