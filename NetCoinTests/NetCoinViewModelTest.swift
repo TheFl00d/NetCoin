@@ -2,17 +2,22 @@
 import XCTest
 @testable import NetCoin
 final class NetCoinViewModelTest: XCTestCase {
-    let networkManager = FakeManager()
+    var fakeNetworkManager: FakeManager?
     var netCoinViewModel : NetCoinViewModel!
     var endPoint = Endpoint()
     override func setUpWithError() throws {
-        
-        netCoinViewModel = NetCoinViewModel(networkManager: networkManager)
+        var fakeNetworkManager = FakeManager()
+
+        netCoinViewModel = NetCoinViewModel(networkManager: fakeNetworkManager)
     }
-    func testAsyncRequestAllCoinsData(){
+    override func tearDownWithError() throws {
+        fakeNetworkManager = nil
+    }
+    func testFetchCoinData(){
         Task {
             do{
-                let coinRequest = try await networkManager.fetchCoinData()
+                guard let fakeNetworkManager = fakeNetworkManager else{return}
+                let coinRequest = try await fakeNetworkManager.fetchCoinData()
                 
                 
                 XCTAssertEqual(coinRequest.0.count, 1 )
@@ -23,21 +28,12 @@ final class NetCoinViewModelTest: XCTestCase {
         }
         
     }
-    func testAsyncRequestTopMoversData(){
-        Task {
-            do{
-                let coinRequest = try await networkManager.fetchCoinData()
-                XCTAssertEqual(coinRequest.1.count, 1 )
-            } catch {
-                print("❌\(error)")
-                fatalError("Failed to return json")
-            }
-        }
-    }
+    
     func testAsyncRequestAllCoinsValues(){
         Task {
             do{
-                let coinRequest = try await networkManager.fetchCoinData()
+                guard let fakeNetworkManager = fakeNetworkManager else{return}
+                let coinRequest = try await fakeNetworkManager.fetchCoinData()
                 
                 XCTAssertEqual(coinRequest.0[0].name, "bitcoin" )
             } catch {
@@ -46,16 +42,5 @@ final class NetCoinViewModelTest: XCTestCase {
             }
         }
     }
-    func testAsyncRequestTopMoverValues(){
-        Task {
-            do{
-                let coinRequest = try await networkManager.fetchCoinData()
-                let percentageChange = coinRequest.1[0].priceChangePercentage24H
-                XCTAssertEqual(percentageChange, -0.62665 )
-            } catch {
-                print("❌\(error)")
-                fatalError("Failed to return json")
-            }
-        }
-    }
+ 
 }

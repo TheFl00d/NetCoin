@@ -7,18 +7,18 @@ import Foundation
 
 class FakeManager: NetworkActions {
     
-    func fetchCoinData() async throws -> ([NetCoinData], [NetCoinData]) {
+    func fetchCoinData() async throws -> [NetCoinData] {
 
         do {
             let bundle = Bundle(for: FakeManager.self)
             guard let path =  bundle.url(forResource:"NetCoinResponse", withExtension: "json") else {
-                return ([],[])}
+                return []}
 
             let data = try Data(contentsOf: path)
             
             let netCoinData = try JSONDecoder().decode([NetCoinData].self, from: data )
-            let topMovers = configureTopMovingCoins(coins: netCoinData)
-            return (netCoinData,topMovers)
+            
+            return netCoinData
             
             
         } catch {
@@ -27,9 +27,6 @@ class FakeManager: NetworkActions {
             
         }
     }
-    func configureTopMovingCoins(coins: [NetCoinData]) -> [NetCoinData] {
-            let topMovers = coins.sorted(by: {$0.priceChangePercentage24H > $1.priceChangePercentage24H})
-            return Array(topMovers.prefix(8))
-        }
+   
 
 }

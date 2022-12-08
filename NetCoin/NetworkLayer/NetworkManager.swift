@@ -10,7 +10,7 @@ protocol NetworkActions {
 }
 class NetworkManager: NetworkActions   {
     func fetchCoinData() async throws -> [NetCoinData] {
-        guard let url = URL(string: Endpoint.coinUrl) else {
+        guard let url = Endpoint.coinUrl else {
             throw NetworkError.invalidUrl
         }
         do {

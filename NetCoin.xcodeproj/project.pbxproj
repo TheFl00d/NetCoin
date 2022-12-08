@@ -35,6 +35,7 @@
 		56CDD05D29268C5400EC112D /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CDD05C29268C5400EC112D /* Color.swift */; };
 		56CDD0602926937D00EC112D /* CircleButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CDD05F2926937D00EC112D /* CircleButtonView.swift */; };
 		56CDD06229269B9000EC112D /* CircleButtonAnimationVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CDD06129269B9000EC112D /* CircleButtonAnimationVIew.swift */; };
+		56D0271829424A62003FCB64 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 56D0271A29424A62003FCB64 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,7 @@
 		56CDD05C29268C5400EC112D /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		56CDD05F2926937D00EC112D /* CircleButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButtonView.swift; sourceTree = "<group>"; };
 		56CDD06129269B9000EC112D /* CircleButtonAnimationVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButtonAnimationVIew.swift; sourceTree = "<group>"; };
+		56D0271929424A62003FCB64 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 		564A205829224B9E0016C1B5 = {
 			isa = PBXGroup;
 			children = (
+				56D0271A29424A62003FCB64 /* Localizable.strings */,
 				564A206329224B9E0016C1B5 /* NetCoin */,
 				564A207929224B9F0016C1B5 /* NetCoinTests */,
 				564A208329224B9F0016C1B5 /* NetCoinUITests */,
@@ -340,6 +343,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				564A206C29224B9F0016C1B5 /* Preview Assets.xcassets in Resources */,
+				56D0271829424A62003FCB64 /* Localizable.strings in Resources */,
 				564A206929224B9F0016C1B5 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -421,6 +425,17 @@
 			targetProxy = 564A208129224B9F0016C1B5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		56D0271A29424A62003FCB64 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				56D0271929424A62003FCB64 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		564A208829224B9F0016C1B5 /* Debug */ = {
