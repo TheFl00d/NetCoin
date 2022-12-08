@@ -3,14 +3,17 @@ import SwiftUI
 import Kingfisher
 struct TopMoversItemView: View {
     let coin: NetCoinData
+    private let cornerRadius: CGFloat = 12
     var body: some View {
         VStack(alignment: .leading) {
             //image
-            KFImage(URL(string: coin.image))
-                .loadDiskFileSynchronously()
-                .cacheMemoryOnly()
-                .resizable()
+            AsyncImage(url: URL(string: coin.image)) { image in
+                image.resizable()
+            } placeholder: {
+                ProgressView()
+            }
                 .frame(width: 32, height: 32)
+                .clipShape(RoundedRectangle(cornerRadius: cornerRadius))
                 .foregroundColor(.orange)
                 .padding(.bottom, 8)
             //coin info

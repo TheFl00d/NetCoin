@@ -26,14 +26,18 @@ extension CoinCellView {
             //market cap
             Text("\(coin.marketCapRank ?? 1)")
             // image
-            KFImage(URL(string: coin.image))
-                .loadDiskFileSynchronously()
-                .cacheMemoryOnly()
-                .resizable()
-                .scaledToFit()
-                .frame(width: 32, height: 32)
-                .foregroundColor(.orange)
-                .padding(.leading)
+//             AsyncImage(url: URL(string: coin.image))
+//
+            AsyncImage(url: URL(string: coin.image)) { image in
+                image.resizable()
+            } placeholder: {
+                ProgressView()
+            }
+            .frame(width: 32, height: 32)
+//                .scaledToFit()
+//                .frame(width: 32, height: 32)
+//                .foregroundColor(.orange)
+//                .padding(.leading)
             //coin name info
             VStack(alignment: .leading, spacing: 4){
                 Text(coin.name)
