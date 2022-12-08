@@ -23,6 +23,9 @@ struct HomeView: View {
             }
             Spacer(minLength: 0)
         }
+        .onAppear{
+            netCoinViewModel.fetchCoinsData()
+        }
     }
 }
 struct HomeView_Previews: PreviewProvider {

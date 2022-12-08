@@ -11,6 +11,9 @@ class NetCoinViewModel: ObservableObject {
     private var cancellables = Set<AnyCancellable>()
     init(networkManager: NetworkActions) {
         self.networkManager = networkManager
+        
+    }
+    func fetchCoinsData(){
         Task {
             let allCoinsData =  try await networkManager.fetchCoinData()
             dataToPublisher(allCoinsData: allCoinsData)
