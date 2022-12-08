@@ -12,7 +12,6 @@ class NetCoinViewModel: ObservableObject {
     init(networkManager: NetworkActions) {
         self.networkManager = networkManager
         Task {
-            //rename tuple
             let allCoinsData =  try await networkManager.fetchCoinData()
             dataToPublisher(allCoinsData: allCoinsData)
         }
@@ -24,7 +23,6 @@ class NetCoinViewModel: ObservableObject {
             self.topMovingCoins = topMoversData
             self.filteredCoins = self.coins
             self.addCoinsSubscribers()
-//            self.addTopMoversSubscribers()
         }
     }
     func addCoinsSubscribers() {
@@ -53,13 +51,7 @@ class NetCoinViewModel: ObservableObject {
         let topMovers = coins.sorted(by: {$0.priceChangePercentage24H > $1.priceChangePercentage24H})
         return Array(topMovers.prefix(8))
     }
-//    func addTopMoversSubscribers(){
-//        $topMovingCoins.receive(on: DispatchQueue.main).sink {
-//            [weak self] (returnedTopCoins) in
-//            self?.topMovingCoins = returnedTopCoins
-//        }
-//        .store(in: &cancellables)
-//    }
+
 }
    
 

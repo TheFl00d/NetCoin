@@ -17,17 +17,13 @@ class NetworkManager: NetworkActions   {
             let (data,_) = try await  URLSession.shared.data(from: url)
             
             let netCoinData = try JSONDecoder().decode([NetCoinData].self, from: data )
-//            let topMovers = configureTopMovingCoins(coins: netCoinData)
             return netCoinData
         } catch {
             throw NetworkError.parsingFailed
         
         }
     }
-//    func configureTopMovingCoins(coins: [NetCoinData]) -> [NetCoinData] {
-//        let topMovers = coins.sorted(by: {$0.priceChangePercentage24H > $1.priceChangePercentage24H})
-//        return Array(topMovers.prefix(8))
-//    }
+
 }
 
 
