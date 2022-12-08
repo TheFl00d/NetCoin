@@ -24,10 +24,10 @@ class NetworkManager: NetworkActions   {
         
         }
     }
-    func configureTopMovingCoins(coins: [NetCoinData]) -> [NetCoinData] {
-        let topMovers = coins.sorted(by: {$0.priceChangePercentage24H > $1.priceChangePercentage24H})
-        return Array(topMovers.prefix(8))
-    }
+//    func configureTopMovingCoins(coins: [NetCoinData]) -> [NetCoinData] {
+//        let topMovers = coins.sorted(by: {$0.priceChangePercentage24H > $1.priceChangePercentage24H})
+//        return Array(topMovers.prefix(8))
+//    }
 }
 
 

@@ -13,17 +13,18 @@ class NetCoinViewModel: ObservableObject {
         self.networkManager = networkManager
         Task {
             //rename tuple
-            let (allCoinsData, topMoversData) =  try await networkManager.fetchCoinData()
-            dataToPublisher(allCoinsData: allCoinsData, topMoversData: topMoversData)
+            let allCoinsData =  try await networkManager.fetchCoinData()
+            dataToPublisher(allCoinsData: allCoinsData)
         }
     }
-    func dataToPublisher(allCoinsData: [NetCoinData], topMoversData: [NetCoinData]){
+    func dataToPublisher(allCoinsData: [NetCoinData]){
         DispatchQueue.main.async {
             self.coins = allCoinsData
+            let topMoversData = self.configureTopMovingCoins(coins: self.coins)
             self.topMovingCoins = topMoversData
             self.filteredCoins = self.coins
             self.addCoinsSubscribers()
-            self.addTopMoversSubscribers()
+//            self.addTopMoversSubscribers()
         }
     }
     func addCoinsSubscribers() {
@@ -48,13 +49,17 @@ class NetCoinViewModel: ObservableObject {
             }
             .store(in: &cancellables)
     }
-    func addTopMoversSubscribers(){
-        $topMovingCoins.receive(on: DispatchQueue.main).sink {
-            [weak self] (returnedTopCoins) in
-            self?.topMovingCoins = returnedTopCoins
-        }
-        .store(in: &cancellables)
+    func configureTopMovingCoins(coins: [NetCoinData]) -> [NetCoinData] {
+        let topMovers = coins.sorted(by: {$0.priceChangePercentage24H > $1.priceChangePercentage24H})
+        return Array(topMovers.prefix(8))
     }
+//    func addTopMoversSubscribers(){
+//        $topMovingCoins.receive(on: DispatchQueue.main).sink {
+//            [weak self] (returnedTopCoins) in
+//            self?.topMovingCoins = returnedTopCoins
+//        }
+//        .store(in: &cancellables)
+//    }
 }
    
 
