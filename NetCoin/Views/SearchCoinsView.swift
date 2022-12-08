@@ -1,8 +1,6 @@
 
 import SwiftUI
-
 struct SearchCoinsView: View {
-    
     @Binding var searchText: String
     var body: some View {
        searchBar
@@ -15,7 +13,6 @@ struct SearchCoinsView: View {
         )
         .padding()
     }
-   
 }
 extension SearchCoinsView {
     private var searchBar: some View {

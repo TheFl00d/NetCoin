@@ -9,7 +9,6 @@ struct TopMoversItemView: View {
             KFImage(URL(string: coin.image))
                 .loadDiskFileSynchronously()
                 .cacheMemoryOnly()
-
                 .resizable()
                 .frame(width: 32, height: 32)
                 .foregroundColor(.orange)

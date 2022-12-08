@@ -1,16 +1,7 @@
-//
-//  CircleButtonView.swift
-//  NetCoin
-//
-//  Created by Kwabena Ankamah on 17/11/2022.
-//
 
 import SwiftUI
-
 struct CircleButtonView: View {
-    
     let iconName: String
-    
     var body: some View {
        Image(systemName: iconName)
             .font(.headline)
@@ -25,7 +16,6 @@ struct CircleButtonView: View {
             .padding()
     }
 }
-
 struct CircleButtonView_Previews: PreviewProvider {
     static var previews: some View {
         Group {

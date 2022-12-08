@@ -1,6 +1,5 @@
 
 import Foundation
-
 /// Converts a Double into a Currency with 2 decimal places
 /// ```
 /// Convert 123043.435324 to 123043.44

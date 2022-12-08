@@ -1,12 +1,5 @@
-//
-//  CircleButtonAnimationVIew.swift
-//  NetCoin
-//
-//  Created by Kwabena Ankamah on 17/11/2022.
-//
 
 import SwiftUI
-
 struct CircleButtonAnimationVIew: View {
     @Binding var animate: Bool
     var body: some View {
@@ -18,7 +11,6 @@ struct CircleButtonAnimationVIew: View {
                 
     }
 }
-
 struct CircleButtonAnimationVIew_Previews: PreviewProvider {
     static var previews: some View {
         CircleButtonAnimationVIew(animate: .constant(false))

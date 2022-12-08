@@ -19,7 +19,6 @@
 		564A206C29224B9F0016C1B5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 564A206B29224B9F0016C1B5 /* Preview Assets.xcassets */; };
 		564A206E29224B9F0016C1B5 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564A206D29224B9F0016C1B5 /* Persistence.swift */; };
 		564A207129224B9F0016C1B5 /* NetCoin.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 564A206F29224B9F0016C1B5 /* NetCoin.xcdatamodeld */; };
-		564A207B29224B9F0016C1B5 /* NetCoinTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564A207A29224B9F0016C1B5 /* NetCoinTests.swift */; };
 		564A208529224B9F0016C1B5 /* NetCoinUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564A208429224B9F0016C1B5 /* NetCoinUITests.swift */; };
 		564A208729224B9F0016C1B5 /* NetCoinUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564A208629224B9F0016C1B5 /* NetCoinUITestsLaunchTests.swift */; };
 		564A209429224D130016C1B5 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564A209329224D130016C1B5 /* NetworkManager.swift */; };
@@ -70,7 +69,6 @@
 		564A206D29224B9F0016C1B5 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		564A207029224B9F0016C1B5 /* NetCoin.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NetCoin.xcdatamodel; sourceTree = "<group>"; };
 		564A207629224B9F0016C1B5 /* NetCoinTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetCoinTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		564A207A29224B9F0016C1B5 /* NetCoinTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetCoinTests.swift; sourceTree = "<group>"; };
 		564A208029224B9F0016C1B5 /* NetCoinUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetCoinUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		564A208429224B9F0016C1B5 /* NetCoinUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetCoinUITests.swift; sourceTree = "<group>"; };
 		564A208629224B9F0016C1B5 /* NetCoinUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetCoinUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -163,7 +161,6 @@
 			isa = PBXGroup;
 			children = (
 				562B32F1293F919C00EC94C7 /* NetCoinViewModelTest.swift */,
-				564A207A29224B9F0016C1B5 /* NetCoinTests.swift */,
 				562B32F5293F953B00EC94C7 /* FakeNetworkManager.swift */,
 				562B32F3293F94F500EC94C7 /* NetCoinResponse.json */,
 				562B32F7293F9B6700EC94C7 /* DoubleTest.swift */,
@@ -395,7 +392,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				564A207B29224B9F0016C1B5 /* NetCoinTests.swift in Sources */,
 				562B32F2293F919C00EC94C7 /* NetCoinViewModelTest.swift in Sources */,
 				562B32F8293F9B6700EC94C7 /* DoubleTest.swift in Sources */,
 				562B32F6293F953B00EC94C7 /* FakeNetworkManager.swift in Sources */,

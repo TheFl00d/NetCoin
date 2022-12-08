@@ -1,14 +1,11 @@
 
 import Foundation
 import Combine
-
-
 class NetCoinViewModel: ObservableObject {
     @Published var coins: [NetCoinData] = []
     @Published var filteredCoins: [NetCoinData] = []
     @Published var topMovingCoins: [NetCoinData] = []
     @Published var portfolioCoins: [NetCoinData] = []
-    
     @Published var searchText: String = ""
     private let networkManager: NetworkActions
     private var cancellables = Set<AnyCancellable>()
@@ -18,13 +15,8 @@ class NetCoinViewModel: ObservableObject {
             //rename tuple
             let (allCoinsData, topMoversData) =  try await networkManager.fetchCoinData()
             dataToPublisher(allCoinsData: allCoinsData, topMoversData: topMoversData)
-          
         }
-        
     }
-    
-    
-    
     func dataToPublisher(allCoinsData: [NetCoinData], topMoversData: [NetCoinData]){
         DispatchQueue.main.async {
             self.coins = allCoinsData
@@ -33,12 +25,8 @@ class NetCoinViewModel: ObservableObject {
             self.addCoinsSubscribers()
             self.addTopMoversSubscribers()
         }
-        
     }
-    
     func addCoinsSubscribers() {
-
-        
         $searchText
             .combineLatest($filteredCoins)
             .debounce(for: .seconds(0.5), scheduler: DispatchQueue.main)
@@ -53,16 +41,13 @@ class NetCoinViewModel: ObservableObject {
                     coin.symbol.lowercased().contains(lowercasedText) ||
                     coin.id.lowercased().contains(lowercasedText)
                 }
-                
             }
            .sink{
                 [weak self] (returnedCoins) in
                 self?.filteredCoins = returnedCoins
             }
             .store(in: &cancellables)
-     
     }
-    
     func addTopMoversSubscribers(){
         $topMovingCoins.receive(on: DispatchQueue.main).sink {
             [weak self] (returnedTopCoins) in
