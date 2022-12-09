@@ -5,12 +5,12 @@ import Foundation
 
 
 
-class FakeManager: NetworkActions {
+class FakeNetworkManager: NetworkActions {
     
     func fetchCoinData() async throws -> [NetCoinData] {
 
         do {
-            let bundle = Bundle(for: FakeManager.self)
+            let bundle = Bundle(for: FakeNetworkManager.self)
             guard let path =  bundle.url(forResource:"NetCoinResponse", withExtension: "json") else {
                 return []}
 

@@ -2,7 +2,7 @@
 
 Application created to demonstrate my expertise in Swift and iOS development. 
 The NetCoin application displays list of 100 crypto currencies order by market cap. Coin are list along with price movement in percentage over the past 24hr.
-This NetCoin mini project created in SwiftUI that uses the reactive programming framework Combine, MVVM architecture and Kingfisher as a third party dependency.
+This NetCoin mini project created in SwiftUI that uses the reactive programming framework Combine and MVVM architecture.
 Api data is fetched using an Async await method that returns a tuple of arrays.
 This project also include Unit tests for view model and number formatters.
 
