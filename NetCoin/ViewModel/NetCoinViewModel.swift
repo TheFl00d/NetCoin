@@ -25,10 +25,10 @@ class NetCoinViewModel: ObservableObject {
             let topMoversData = self.configureTopMovingCoins(coins: self.coins)
             self.topMovingCoins = topMoversData
             self.filteredCoins = self.coins
-            self.addCoinsSubscribers()
+            self.addCoinsSubscribers(searchText: self.searchText, filteredCoins: self.filteredCoins)
         }
     }
-    func addCoinsSubscribers() {
+    func addCoinsSubscribers(searchText: String, filteredCoins: [NetCoinData]) {
         $searchText
             .combineLatest($filteredCoins)
             .debounce(for: .seconds(0.5), scheduler: DispatchQueue.main)

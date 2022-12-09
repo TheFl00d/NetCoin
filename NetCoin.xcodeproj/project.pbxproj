@@ -30,7 +30,6 @@
 		564A20A42922824A0016C1B5 /* CoinCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564A20A32922824A0016C1B5 /* CoinCellView.swift */; };
 		564A20A629228DCD0016C1B5 /* NetCoinViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564A20A529228DCD0016C1B5 /* NetCoinViewModel.swift */; };
 		56CDD0552924025B00EC112D /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CDD0542924025B00EC112D /* Endpoint.swift */; };
-		56CDD05829252CE900EC112D /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 56CDD05729252CE900EC112D /* Kingfisher */; };
 		56CDD05B29252EAC00EC112D /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CDD05A29252EAC00EC112D /* Double.swift */; };
 		56CDD05D29268C5400EC112D /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CDD05C29268C5400EC112D /* Color.swift */; };
 		56CDD0602926937D00EC112D /* CircleButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CDD05F2926937D00EC112D /* CircleButtonView.swift */; };
@@ -94,7 +93,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				56CDD05829252CE900EC112D /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,7 +247,6 @@
 			);
 			name = NetCoin;
 			packageProductDependencies = (
-				56CDD05729252CE900EC112D /* Kingfisher */,
 			);
 			productName = NetCoin;
 			productReference = 564A206129224B9E0016C1B5 /* NetCoin.app */;
@@ -324,7 +321,6 @@
 			);
 			mainGroup = 564A205829224B9E0016C1B5;
 			packageReferences = (
-				56CDD05629252CE900EC112D /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 564A206229224B9E0016C1B5 /* Products */;
 			projectDirPath = "";
@@ -718,25 +714,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		56CDD05629252CE900EC112D /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		56CDD05729252CE900EC112D /* Kingfisher */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 56CDD05629252CE900EC112D /* XCRemoteSwiftPackageReference "Kingfisher" */;
-			productName = Kingfisher;
-		};
-/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		564A206F29224B9F0016C1B5 /* NetCoin.xcdatamodeld */ = {
