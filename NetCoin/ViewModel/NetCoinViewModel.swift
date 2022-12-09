@@ -54,7 +54,6 @@ class NetCoinViewModel: ObservableObject {
         let topMovers = coins.sorted(by: {$0.priceChangePercentage24H > $1.priceChangePercentage24H})
         return Array(topMovers.prefix(8))
     }
-
 }
    
 

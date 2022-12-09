@@ -7,9 +7,7 @@ final class NetCoinViewModelTest: XCTestCase {
     
     override func setUpWithError() throws {
         fakeNetworkManager = FakeNetworkManager()
-
         netCoinViewModel = NetCoinViewModel(networkManager: fakeNetworkManager!)
-        
     }
     override func tearDownWithError() throws {
         fakeNetworkManager = nil
@@ -18,9 +16,7 @@ final class NetCoinViewModelTest: XCTestCase {
         Task {
             do{
                 guard let fakeNetworkManager = fakeNetworkManager else { return }
-
                 let coinRequest = try await fakeNetworkManager.fetchCoinData()
-                
                 print(coinRequest)
                 XCTAssertEqual(coinRequest.count, 1)
             } catch {
@@ -28,15 +24,11 @@ final class NetCoinViewModelTest: XCTestCase {
                 fatalError("Failed to return json")
             }
         }
-        
     }
-    
     func testFetchCoinDatatAllCoinsValues(){
         Task {
             guard let fakeNetworkManager = fakeNetworkManager else { return }
-
             do{
-               
                 let coinRequest = try await fakeNetworkManager.fetchCoinData()
                 print(coinRequest)
                 XCTAssertEqual(coinRequest[0].name, "bitcoin" )
@@ -46,9 +38,7 @@ final class NetCoinViewModelTest: XCTestCase {
             }
         }
     }
-    
     func testConfigureTopMovingCoins(){
-        
         Task {
             guard let fakeNetworkManager = fakeNetworkManager else { return }
             let allCoinsData =  try await fakeNetworkManager.fetchCoinData()
@@ -56,11 +46,7 @@ final class NetCoinViewModelTest: XCTestCase {
             var topMovers = allCoinsData.sorted(by: {$0.priceChangePercentage24H > $1.priceChangePercentage24H})
             topMovers = Array(topMovers.prefix(8))
             print(topMovers[0].name )
-            let topMoversCount = topMovers.count
-            XCTAssertEqual(topMoversCount, 7 )
-//            XCTAssertNotEqual(topMovers.count, 1)
+            XCTAssertEqual(topMovers.count, 8 )
         }
-      
     }
- 
 }
