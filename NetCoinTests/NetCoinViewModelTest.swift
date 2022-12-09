@@ -5,10 +5,12 @@ final class NetCoinViewModelTest: XCTestCase {
     var fakeNetworkManager: FakeManager?
     var netCoinViewModel : NetCoinViewModel!
     var endPoint = Endpoint()
+    
     override func setUpWithError() throws {
-        var fakeNetworkManager = FakeManager()
+        fakeNetworkManager = FakeManager()
 
-        netCoinViewModel = NetCoinViewModel(networkManager: fakeNetworkManager)
+        netCoinViewModel = NetCoinViewModel(networkManager: fakeNetworkManager!)
+        
     }
     override func tearDownWithError() throws {
         fakeNetworkManager = nil
@@ -16,11 +18,12 @@ final class NetCoinViewModelTest: XCTestCase {
     func testFetchCoinData(){
         Task {
             do{
-                guard let fakeNetworkManager = fakeNetworkManager else{return}
+                guard let fakeNetworkManager = fakeNetworkManager else { return }
+
                 let coinRequest = try await fakeNetworkManager.fetchCoinData()
                 
-                
-                XCTAssertEqual(coinRequest.0.count, 1 )
+                print(coinRequest)
+                XCTAssertEqual(coinRequest.count, 1)
             } catch {
                 print("❌\(error)")
                 fatalError("Failed to return json")
@@ -29,18 +32,36 @@ final class NetCoinViewModelTest: XCTestCase {
         
     }
     
-    func testAsyncRequestAllCoinsValues(){
+    func testFetchCoinDatatAllCoinsValues(){
         Task {
+            guard let fakeNetworkManager = fakeNetworkManager else { return }
+
             do{
-                guard let fakeNetworkManager = fakeNetworkManager else{return}
+               
                 let coinRequest = try await fakeNetworkManager.fetchCoinData()
-                
-                XCTAssertEqual(coinRequest.0[0].name, "bitcoin" )
+                print(coinRequest)
+                XCTAssertEqual(coinRequest[0].name, "bitcoin" )
             } catch {
                 print("❌\(error)")
                 fatalError("Failed to return json")
             }
         }
+    }
+    
+    func testConfigureTopMovingCoins(){
+        
+        Task {
+            guard let fakeNetworkManager = fakeNetworkManager else { return }
+            let allCoinsData =  try await fakeNetworkManager.fetchCoinData()
+            netCoinViewModel.dataToPublisher(allCoinsData: allCoinsData)
+            var topMovers = allCoinsData.sorted(by: {$0.priceChangePercentage24H > $1.priceChangePercentage24H})
+            topMovers = Array(topMovers.prefix(8))
+            print(topMovers[0].name )
+            let topMoversCount = topMovers.count
+            XCTAssertEqual(topMoversCount, 8 )
+            XCTAssertNotEqual(topMovers.count, 1)
+        }
+      
     }
  
 }
