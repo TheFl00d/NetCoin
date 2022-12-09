@@ -1,6 +1,5 @@
 
 import SwiftUI
-import Kingfisher
 struct TopMoversItemView: View {
     let coin: NetCoinData
     private let cornerRadius: CGFloat = 12

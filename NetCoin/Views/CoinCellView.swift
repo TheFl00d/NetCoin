@@ -1,6 +1,5 @@
 
 import SwiftUI
-import Kingfisher
 struct CoinCellView: View {
     let coin: NetCoinData
     let showHoldingsColumn: Bool
