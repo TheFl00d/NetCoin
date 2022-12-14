@@ -14,7 +14,6 @@
 		562B32F6293F953B00EC94C7 /* FakeNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562B32F5293F953B00EC94C7 /* FakeNetworkManager.swift */; };
 		562B32F8293F9B6700EC94C7 /* DoubleTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562B32F7293F9B6700EC94C7 /* DoubleTest.swift */; };
 		564A206529224B9E0016C1B5 /* NetCoinApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564A206429224B9E0016C1B5 /* NetCoinApp.swift */; };
-		564A206729224B9E0016C1B5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564A206629224B9E0016C1B5 /* ContentView.swift */; };
 		564A206929224B9F0016C1B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 564A206829224B9F0016C1B5 /* Assets.xcassets */; };
 		564A206C29224B9F0016C1B5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 564A206B29224B9F0016C1B5 /* Preview Assets.xcassets */; };
 		564A206E29224B9F0016C1B5 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564A206D29224B9F0016C1B5 /* Persistence.swift */; };
@@ -22,13 +21,14 @@
 		564A208529224B9F0016C1B5 /* NetCoinUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564A208429224B9F0016C1B5 /* NetCoinUITests.swift */; };
 		564A208729224B9F0016C1B5 /* NetCoinUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564A208629224B9F0016C1B5 /* NetCoinUITestsLaunchTests.swift */; };
 		564A209429224D130016C1B5 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564A209329224D130016C1B5 /* NetworkManager.swift */; };
-		564A209729224E340016C1B5 /* NetCoinData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564A209629224E340016C1B5 /* NetCoinData.swift */; };
+		564A209729224E340016C1B5 /* NetCoin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564A209629224E340016C1B5 /* NetCoin.swift */; };
 		564A209A29226D340016C1B5 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564A209929226D340016C1B5 /* HomeView.swift */; };
 		564A209C29226DC40016C1B5 /* TopMoversView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564A209B29226DC40016C1B5 /* TopMoversView.swift */; };
 		564A209E29226DD80016C1B5 /* TopMoversItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564A209D29226DD80016C1B5 /* TopMoversItemView.swift */; };
 		564A20A0292281FC0016C1B5 /* AllCoinsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564A209F292281FC0016C1B5 /* AllCoinsView.swift */; };
 		564A20A42922824A0016C1B5 /* CoinCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564A20A32922824A0016C1B5 /* CoinCellView.swift */; };
 		564A20A629228DCD0016C1B5 /* NetCoinViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564A20A529228DCD0016C1B5 /* NetCoinViewModel.swift */; };
+		565C0CE3294A4C5000FCBAF7 /* NetCoinRespository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565C0CE2294A4C5000FCBAF7 /* NetCoinRespository.swift */; };
 		56CDD0552924025B00EC112D /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CDD0542924025B00EC112D /* Endpoint.swift */; };
 		56CDD05B29252EAC00EC112D /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CDD05A29252EAC00EC112D /* Double.swift */; };
 		56CDD05D29268C5400EC112D /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CDD05C29268C5400EC112D /* Color.swift */; };
@@ -63,7 +63,6 @@
 		562B32F7293F9B6700EC94C7 /* DoubleTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleTest.swift; sourceTree = "<group>"; };
 		564A206129224B9E0016C1B5 /* NetCoin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetCoin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		564A206429224B9E0016C1B5 /* NetCoinApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetCoinApp.swift; sourceTree = "<group>"; };
-		564A206629224B9E0016C1B5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		564A206829224B9F0016C1B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		564A206B29224B9F0016C1B5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		564A206D29224B9F0016C1B5 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -73,13 +72,14 @@
 		564A208429224B9F0016C1B5 /* NetCoinUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetCoinUITests.swift; sourceTree = "<group>"; };
 		564A208629224B9F0016C1B5 /* NetCoinUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetCoinUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		564A209329224D130016C1B5 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
-		564A209629224E340016C1B5 /* NetCoinData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetCoinData.swift; sourceTree = "<group>"; };
+		564A209629224E340016C1B5 /* NetCoin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetCoin.swift; sourceTree = "<group>"; };
 		564A209929226D340016C1B5 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		564A209B29226DC40016C1B5 /* TopMoversView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopMoversView.swift; sourceTree = "<group>"; };
 		564A209D29226DD80016C1B5 /* TopMoversItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopMoversItemView.swift; sourceTree = "<group>"; };
 		564A209F292281FC0016C1B5 /* AllCoinsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllCoinsView.swift; sourceTree = "<group>"; };
 		564A20A32922824A0016C1B5 /* CoinCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinCellView.swift; sourceTree = "<group>"; };
 		564A20A529228DCD0016C1B5 /* NetCoinViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetCoinViewModel.swift; sourceTree = "<group>"; };
+		565C0CE2294A4C5000FCBAF7 /* NetCoinRespository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetCoinRespository.swift; sourceTree = "<group>"; };
 		56CDD0542924025B00EC112D /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		56CDD05A29252EAC00EC112D /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 		56CDD05C29268C5400EC112D /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
@@ -137,11 +137,11 @@
 		564A206329224B9E0016C1B5 /* NetCoin */ = {
 			isa = PBXGroup;
 			children = (
+				565C0CE1294A4C2B00FCBAF7 /* Respository */,
 				56CDD05929252E9800EC112D /* Extensions */,
 				56CDD0402922955800EC112D /* ViewModel */,
 				564A209829226D0A0016C1B5 /* Views */,
 				564A209529224E0E0016C1B5 /* NetworkLayer */,
-				564A206629224B9E0016C1B5 /* ContentView.swift */,
 				564A206829224B9F0016C1B5 /* Assets.xcassets */,
 				564A206D29224B9F0016C1B5 /* Persistence.swift */,
 				564A206F29224B9F0016C1B5 /* NetCoin.xcdatamodeld */,
@@ -183,7 +183,7 @@
 			children = (
 				564A206429224B9E0016C1B5 /* NetCoinApp.swift */,
 				564A209329224D130016C1B5 /* NetworkManager.swift */,
-				564A209629224E340016C1B5 /* NetCoinData.swift */,
+				564A209629224E340016C1B5 /* NetCoin.swift */,
 				56CDD0542924025B00EC112D /* Endpoint.swift */,
 			);
 			path = NetworkLayer;
@@ -201,6 +201,14 @@
 				562B32ED293E4A2000EC94C7 /* SearchCoinsView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		565C0CE1294A4C2B00FCBAF7 /* Respository */ = {
+			isa = PBXGroup;
+			children = (
+				565C0CE2294A4C5000FCBAF7 /* NetCoinRespository.swift */,
+			);
+			path = Respository;
 			sourceTree = "<group>";
 		};
 		56CDD0402922955800EC112D /* ViewModel */ = {
@@ -368,10 +376,11 @@
 			files = (
 				564A209C29226DC40016C1B5 /* TopMoversView.swift in Sources */,
 				564A20A629228DCD0016C1B5 /* NetCoinViewModel.swift in Sources */,
-				564A209729224E340016C1B5 /* NetCoinData.swift in Sources */,
+				564A209729224E340016C1B5 /* NetCoin.swift in Sources */,
 				56CDD0552924025B00EC112D /* Endpoint.swift in Sources */,
 				564A209A29226D340016C1B5 /* HomeView.swift in Sources */,
 				56CDD06229269B9000EC112D /* CircleButtonAnimationVIew.swift in Sources */,
+				565C0CE3294A4C5000FCBAF7 /* NetCoinRespository.swift in Sources */,
 				564A20A42922824A0016C1B5 /* CoinCellView.swift in Sources */,
 				56CDD05B29252EAC00EC112D /* Double.swift in Sources */,
 				562B32F0293E4F2100EC94C7 /* UIApplication.swift in Sources */,
@@ -382,7 +391,6 @@
 				564A209429224D130016C1B5 /* NetworkManager.swift in Sources */,
 				564A209E29226DD80016C1B5 /* TopMoversItemView.swift in Sources */,
 				564A20A0292281FC0016C1B5 /* AllCoinsView.swift in Sources */,
-				564A206729224B9E0016C1B5 /* ContentView.swift in Sources */,
 				564A206529224B9E0016C1B5 /* NetCoinApp.swift in Sources */,
 				562B32EE293E4A2000EC94C7 /* SearchCoinsView.swift in Sources */,
 			);
@@ -563,7 +571,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -592,7 +600,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

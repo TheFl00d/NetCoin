@@ -1,7 +1,6 @@
-
 import SwiftUI
 struct CoinCellView: View {
-    let coin: NetCoinData
+    let coin: NetCoin
     let showHoldingsColumn: Bool
     var body: some View {
         HStack(spacing: 0) {

@@ -1,7 +1,7 @@
 
 import Foundation
 
-struct NetCoinData: Codable, Identifiable {
+struct NetCoin: Codable, Identifiable {
     let id, symbol, name: String
     let image: String
     let currentPrice: Double
@@ -23,8 +23,8 @@ struct NetCoinData: Codable, Identifiable {
         case currentHoldings
     }
     
-    func updateHoldings(amount: Double) -> NetCoinData {
-        return NetCoinData(id: id, symbol: symbol, name: name, image: image, currentPrice: currentPrice, marketCapRank: marketCapRank, high24H: high24H, low24H: low24H, priceChange24H: priceChange24H, priceChangePercentage24H: priceChangePercentage24H, priceChangePercentage24HInCurrency: priceChangePercentage24HInCurrency, currentHoldings: amount)
+    func updateHoldings(amount: Double) -> NetCoin {
+        return NetCoin(id: id, symbol: symbol, name: name, image: image, currentPrice: currentPrice, marketCapRank: marketCapRank, high24H: high24H, low24H: low24H, priceChange24H: priceChange24H, priceChangePercentage24H: priceChangePercentage24H, priceChangePercentage24HInCurrency: priceChangePercentage24HInCurrency, currentHoldings: amount)
     }
     
     var currentHoldingsValue: Double {

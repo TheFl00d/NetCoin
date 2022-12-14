@@ -1,7 +1,7 @@
 
 import SwiftUI
 struct TopMoversItemView: View {
-    let coin: NetCoinData
+    let coin: NetCoin
     private let cornerRadius: CGFloat = 12
     var body: some View {
         VStack(alignment: .leading) {

@@ -6,17 +6,29 @@ enum NetworkError: Error {
     case invalidUrl
 }
 protocol NetworkActions {
-    func fetchCoinData() async throws -> [NetCoinData]
+    func get(url: URL) async throws -> Data
+    func fetchCoinData() async throws -> [NetCoin]
 }
 class NetworkManager: NetworkActions   {
-    func fetchCoinData() async throws -> [NetCoinData] {
+    func get(url: URL) async throws -> Data {
+        do {
+            let (data,_) = try await  URLSession.shared.data(from: url)
+            return data
+        } catch {
+            throw NetworkError.parsingFailed
+        
+        }
+    }
+    
+  
+    func fetchCoinData() async throws -> [NetCoin] {
         guard let url = Endpoint.coinUrl else {
             throw NetworkError.invalidUrl
         }
         do {
             let (data,_) = try await  URLSession.shared.data(from: url)
             
-            let netCoinData = try JSONDecoder().decode([NetCoinData].self, from: data )
+            let netCoinData = try JSONDecoder().decode([NetCoin].self, from: data )
             return netCoinData
         } catch {
             throw NetworkError.parsingFailed
@@ -25,6 +37,7 @@ class NetworkManager: NetworkActions   {
     }
 
 }
+
 
 
 

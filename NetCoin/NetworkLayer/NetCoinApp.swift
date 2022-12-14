@@ -8,7 +8,7 @@ struct NetCoinApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationView{
-                HomeView(netCoinViewModel: NetCoinViewModel(networkManager: NetworkManager()))
+                HomeView(netCoinViewModel: NetCoinViewModel(repository: NetCoinRepositoryImpl(networkManager: NetworkManager())))
                     .environment(\.managedObjectContext, persistenceController.container.viewContext)
                     .navigationBarHidden(true)
             }

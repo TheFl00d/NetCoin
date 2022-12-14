@@ -7,7 +7,7 @@ import Foundation
 
 class FakeNetworkManager: NetworkActions {
     
-    func fetchCoinData() async throws -> [NetCoinData] {
+    func fetchCoinData() async throws -> [NetCoin] {
 
         do {
             let bundle = Bundle(for: FakeNetworkManager.self)
@@ -16,7 +16,7 @@ class FakeNetworkManager: NetworkActions {
 
             let data = try Data(contentsOf: path)
             
-            let netCoinData = try JSONDecoder().decode([NetCoinData].self, from: data )
+            let netCoinData = try JSONDecoder().decode([NetCoin].self, from: data )
             
             return netCoinData
             

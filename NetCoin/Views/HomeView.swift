@@ -1,5 +1,6 @@
 
 import SwiftUI
+
 struct HomeView: View {
     @StateObject var netCoinViewModel:  NetCoinViewModel
     @State private var showPortfolio: Bool = false
@@ -16,7 +17,7 @@ struct HomeView: View {
                     .listStyle(PlainListStyle())
                     .transition(.move(edge: .leading))
             }
-            if showPortfolio{
+            if showPortfolio {
                 AllCoinsView(netCoinViewModel: netCoinViewModel, showPortfolio: $showPortfolio)
                     .listStyle(PlainListStyle())
                     .transition(.move(edge: .trailing))
@@ -24,13 +25,13 @@ struct HomeView: View {
             Spacer(minLength: 0)
         }
         .onAppear{
-            netCoinViewModel.fetchCoinsData()
+            netCoinViewModel.fetchCoins(urlStr: Endpoint.coinUrlStr )
         }
     }
 }
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView(netCoinViewModel: NetCoinViewModel(networkManager: NetworkManager()))
+        HomeView(netCoinViewModel: NetCoinViewModel(repository: NetCoinRepositoryImpl(networkManager: NetworkManager())))
     }
 }
 extension HomeView {
