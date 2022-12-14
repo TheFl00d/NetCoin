@@ -22,7 +22,7 @@ class NetworkManager: NetworkActions   {
     
   
     func fetchCoinData() async throws -> [NetCoin] {
-        guard let url = Endpoint.coinUrl else {
+        guard let url = URL(string: Endpoint.coinUrlStr) else {
             throw NetworkError.invalidUrl
         }
         do {
