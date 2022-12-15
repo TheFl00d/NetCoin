@@ -7,7 +7,7 @@ enum NetworkError: Error {
 }
 protocol NetworkActions {
     func get(url: URL) async throws -> Data
-    func fetchCoinData() async throws -> [NetCoin]
+    
 }
 class NetworkManager: NetworkActions   {
     func get(url: URL) async throws -> Data {
@@ -21,20 +21,7 @@ class NetworkManager: NetworkActions   {
     }
     
   
-    func fetchCoinData() async throws -> [NetCoin] {
-        guard let url = URL(string: Endpoint.coinUrlStr) else {
-            throw NetworkError.invalidUrl
-        }
-        do {
-            let (data,_) = try await  URLSession.shared.data(from: url)
-            
-            let netCoinData = try JSONDecoder().decode([NetCoin].self, from: data )
-            return netCoinData
-        } catch {
-            throw NetworkError.parsingFailed
-        
-        }
-    }
+    
 
 }
 

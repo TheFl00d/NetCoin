@@ -6,6 +6,18 @@ import Foundation
 
 
 class FakeNetworkManager: NetworkActions {
+   
+        func get(url: URL) async throws -> Data {
+            do {
+                let (data,_) = try await  URLSession.shared.data(from: url)
+                return data
+            } catch {
+                throw NetworkError.parsingFailed
+            
+            }
+        }
+    }
+    
     
     func fetchCoinData() async throws -> [NetCoin] {
 
@@ -29,4 +41,4 @@ class FakeNetworkManager: NetworkActions {
     }
    
 
-}
+
