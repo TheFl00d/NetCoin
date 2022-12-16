@@ -4,7 +4,7 @@ import SwiftUI
 @main
 struct NetCoinApp: App {
     let persistenceController = PersistenceController.shared
- 
+
     var body: some Scene {
         WindowGroup {
             NavigationView{
@@ -12,7 +12,7 @@ struct NetCoinApp: App {
                     .environment(\.managedObjectContext, persistenceController.container.viewContext)
                     .navigationBarHidden(true)
             }
-            
+
         }
     }
 }
