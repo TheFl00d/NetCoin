@@ -2,13 +2,11 @@
 
 import Foundation
 import Combine
-
-protocol NetCoinViewModelAction: AnyObject, ObservableObject {
+protocol NetCoinViewModelAction: ObservableObject {
     func fetchCoins(urlStr: String)
 }
-
 final class NetCoinViewModel {
-    @Published private var coins: [NetCoin] = []
+    var coins: [NetCoin] = []
     @Published private(set) var filteredCoins: [NetCoin] = []
     @Published var searchText: String = ""
 
@@ -24,7 +22,6 @@ final class NetCoinViewModel {
         self.repository = repository
     }
 }
-
 extension NetCoinViewModel: NetCoinViewModelAction {
     func fetchCoins(urlStr: String) {
         guard let url = URL(string: urlStr) else {
@@ -33,45 +30,37 @@ extension NetCoinViewModel: NetCoinViewModelAction {
         Task {
             do {
                 let netCoins = try await repository.getCoins(for: url)
-                dataToPublisher(allCoinsData: netCoins)
+                dataToPublisher(netCoins: netCoins)
             }catch {
-                // handle error
+                dataToPublisher(netCoins: [])
             }
         }
     }
 }
-   
 extension NetCoinViewModel {
-    private func dataToPublisher(allCoinsData: [NetCoin]) {
+    private func dataToPublisher(netCoins: [NetCoin]) {
          DispatchQueue.main.async {
-             self.coins = allCoinsData
-             self.filteredCoins = allCoinsData
-             self.addCoinsSubscribers(searchText: self.searchText, filteredCoins: self.filteredCoins)
+             self.coins = netCoins
+             self.filteredCoins = netCoins
+             self.addCoinsSubscribers(searchText: self.searchText)
          }
      }
-     
-     private func addCoinsSubscribers(searchText: String, filteredCoins: [NetCoin]) {
+     private func addCoinsSubscribers(searchText: String) {
          $searchText
-             .combineLatest($filteredCoins)
              .debounce(for: .seconds(0.5), scheduler: DispatchQueue.main)
-             .map{ (text, filteredCoins) -> [NetCoin] in
-                 guard !text.isEmpty else {
+             .map {
+                 guard !$0.isEmpty else {
                      return self.coins
                  }
-                 let lowercasedText = text.lowercased()
-                 
-                 return filteredCoins.filter{(coin) -> Bool in
-                     return coin.name.lowercased().contains(lowercasedText) ||
-                     coin.symbol.lowercased().contains(lowercasedText) ||
-                     coin.id.lowercased().contains(lowercasedText)
+                 let lowercasedText = $0.lowercased()
+                 return self.coins.filter{
+                      $0.name.lowercased().contains(lowercasedText) ||
+                      $0.symbol.lowercased().contains(lowercasedText) ||
+                      $0.id.lowercased().contains(lowercasedText)
                  }
              }
-            .sink{
-                 [weak self] (returnedCoins) in
-                 self?.filteredCoins = returnedCoins
-             }
+             .assign(to: \.filteredCoins, on: self)
              .store(in: &cancellables)
      }
 }
-    
     
