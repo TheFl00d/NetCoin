@@ -5,40 +5,20 @@ import Foundation
 
 
 
-class FakeNetworkManager: NetworkActions {
-   
-        func get(url: URL) async throws -> Data {
-            do {
-                let (data,_) = try await  URLSession.shared.data(from: url)
-                return data
-            } catch {
-                throw NetworkError.parsingFailed
-            
-            }
-        }
-    }
-    
-    
-    func fetchCoinData() async throws -> [NetCoin] {
+import Foundation
+@testable import NetCoin
 
+class FakeNetworkManager: NetworkActions {
+    func get(url: URL) async throws -> Data {
         do {
             let bundle = Bundle(for: FakeNetworkManager.self)
-            guard let path =  bundle.url(forResource:"NetCoinResponse", withExtension: "json") else {
-                return []}
-
+            guard let path =  bundle.url(forResource:url.absoluteString, withExtension: "json") else {
+                throw NetworkError.invalidUrl
+            }
             let data = try Data(contentsOf: path)
-            
-            let netCoinData = try JSONDecoder().decode([NetCoin].self, from: data )
-            
-            return netCoinData
-            
-            
+            return data
         } catch {
-            print("❌\(error)")
-             fatalError("Failed to return json")
-            
+            throw NetworkError.dataNotFound
         }
     }
-   
-
-
+}
