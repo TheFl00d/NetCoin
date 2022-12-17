@@ -1,4 +1,8 @@
+/*
 
+  Created by Kwabena Ankamah on 08/12/2022.
+  
+*/
 import Foundation
 /// Converts a Double into a Currency with 2 decimal places
 /// ```

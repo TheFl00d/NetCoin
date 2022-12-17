@@ -1,4 +1,9 @@
+/*
 
+
+  Created by Kwabena Ankamah on 08/12/2022.
+  
+*/
 import SwiftUI
 struct CircleButtonAnimationVIew: View {
     @Binding var animate: Bool

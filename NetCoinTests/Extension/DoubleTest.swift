@@ -1,4 +1,10 @@
+/*
+  DoubleTest.swift
+  NetCoinTests
 
+  Created by Kwabena Ankamah on 08/12/2022.
+  
+*/
 import XCTest
 @testable import NetCoin
 final class DoubleTest: XCTestCase {
