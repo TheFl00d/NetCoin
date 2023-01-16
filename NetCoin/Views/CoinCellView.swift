@@ -23,17 +23,16 @@ struct CoinCellView: View {
 }
 extension CoinCellView {
     private var leftColumn: some View {
-        HStack (spacing: 0) {
+        HStack(spacing: 0) {
             Text("\(coin.marketCapRank ?? 1)")
-  
-            AsyncImage(url: URL(string: coin.image)) { image in
+              AsyncImage(url: URL(string: coin.image)) { image in
                 image.resizable()
             } placeholder: {
                 ProgressView()
             }
             .frame(width: 20, height: 20)
 
-            VStack(alignment: .leading, spacing: 4){
+            VStack(alignment: .leading, spacing: 4) {
                 Text(coin.name)
                     .font(.subheadline)
                     .fontWeight(.semibold)

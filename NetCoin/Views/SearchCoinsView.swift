@@ -38,8 +38,7 @@ extension SearchCoinsView {
                         UIApplication.shared.closeEdit()
                         searchText = ""
                     }
-                        ,alignment: .trailing
-                        
+                        , alignment: .trailing
                     )
         }
     }

@@ -27,13 +27,10 @@ struct NetCoin: Codable, Identifiable {
         case priceChangePercentage24HInCurrency = "price_change_percentage_24h_in_currency"
         case currentHoldings
     }
-    
     func updateHoldings(amount: Double) -> NetCoin {
         return NetCoin(id: id, symbol: symbol, name: name, image: image, currentPrice: currentPrice, marketCapRank: marketCapRank, high24H: high24H, low24H: low24H, priceChange24H: priceChange24H, priceChangePercentage24H: priceChangePercentage24H, priceChangePercentage24HInCurrency: priceChangePercentage24HInCurrency, currentHoldings: amount)
     }
-    
     var currentHoldingsValue: Double {
         return (currentHoldings ?? 0) * currentPrice
-    }  
+    }
 }
-

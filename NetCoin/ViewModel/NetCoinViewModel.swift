@@ -53,7 +53,7 @@ extension NetCoinViewModel {
                      return self.coins
                  }
                  let lowercasedText = $0.lowercased()
-                 return self.coins.filter{
+                 return self.coins.filter {
                       $0.name.lowercased().contains(lowercasedText) ||
                       $0.symbol.lowercased().contains(lowercasedText) ||
                       $0.id.lowercased().contains(lowercasedText)
@@ -63,4 +63,3 @@ extension NetCoinViewModel {
              .store(in: &cancellables)
      }
 }
-    

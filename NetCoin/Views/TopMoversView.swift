@@ -11,9 +11,9 @@ struct TopMoversView: View {
         VStack(alignment: .leading) {
             Text("Top Movers")
                 .font(.headline)
-            ScrollView(.horizontal){
-                HStack(spacing: 16 ){
-                    ForEach(netCoinViewModel.topMovingCoins){ coin in
+            ScrollView(.horizontal) {
+                HStack(spacing: 16 ) {
+                    ForEach(netCoinViewModel.topMovingCoins) { coin in
                         TopMoversItemView(coin: coin)
                     }
                 }
@@ -22,4 +22,3 @@ struct TopMoversView: View {
         .padding()
     }
 }
-

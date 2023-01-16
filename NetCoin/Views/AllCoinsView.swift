@@ -8,14 +8,13 @@ struct AllCoinsView: View {
     @StateObject var netCoinViewModel: NetCoinViewModel
     @Binding var showPortfolio: Bool
     var body: some View {
-        VStack(alignment: .leading){
+        VStack(alignment: .leading) {
             Text("All Coins")
                 .font(.headline)
                 .padding()
             columnTitles
                 VStack {
                     List {
-                        //possible if statement here
                         ForEach(netCoinViewModel.filteredCoins) { coin in
                             CoinCellView(coin: coin, showHoldingsColumn: showPortfolio)
                                 .listRowInsets(.init(top: 10, leading: -0.10, bottom: 10, trailing: 0))
@@ -28,7 +27,7 @@ struct AllCoinsView: View {
         HStack {
             Text("Coin")
             Spacer()
-            if showPortfolio{
+            if showPortfolio {
                 Text("Holdings")
             }
             Text("Prices")

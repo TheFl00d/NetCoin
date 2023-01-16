@@ -9,7 +9,6 @@ struct TopMoversItemView: View {
     private let cornerRadius: CGFloat = 12
     var body: some View {
         VStack(alignment: .leading) {
-            //image
             AsyncImage(url: URL(string: coin.image)) { image in
                 image.resizable()
             } placeholder: {
@@ -19,17 +18,14 @@ struct TopMoversItemView: View {
                 .clipShape(RoundedRectangle(cornerRadius: cornerRadius))
                 .foregroundColor(.orange)
                 .padding(.bottom, 8)
-            //coin info
             HStack{
                 Text(coin.symbol.uppercased())
                     .font(.caption)
                     .fontWeight(.bold)
-                
                 Text(coin.currentPrice.toCurrency()).fontWeight(.bold)
                     .font(.caption)
                     .foregroundColor(.gray)
             }
-            //coin percentage change
             Text(coin.priceChangePercentage24H.toPercentString())
                 .font(.title2)
                 .foregroundColor(coin.priceChangePercentage24H > 0 ? .green : .red)
@@ -38,8 +34,7 @@ struct TopMoversItemView: View {
         .background(Color("ItemBackgroundColor"))
         .overlay(
         RoundedRectangle(cornerRadius: 10)
-            .stroke(Color(.systemGray4),lineWidth: 2
+            .stroke(Color(.systemGray4), lineWidth: 2
                    ))
     }
 }
-

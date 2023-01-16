@@ -26,9 +26,8 @@ extension Double {
         func toCurrency() -> String {
             return currencyFormatter.string(for: self) ?? "$0.00"
         }
-        func toPercentString()-> String {
+        func toPercentString() -> String {
             guard let numberAsString = numberFormatter.string(for: self) else {return "" }
             return numberAsString + "%"
         }
     }
-

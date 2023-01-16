@@ -10,11 +10,10 @@ import SwiftUI
 struct NetCoinApp: App {
     var body: some Scene {
         WindowGroup {
-            NavigationView{
+            NavigationView {
                 HomeView(netCoinViewModel: NetCoinViewModel(repository: NetCoinRepositoryImpl(networkManager: NetworkManager())))
                     .navigationBarHidden(true)
             }
-            
         }
     }
 }
