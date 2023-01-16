@@ -28,6 +28,9 @@
 		564A20A0292281FC0016C1B5 /* AllCoinsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564A209F292281FC0016C1B5 /* AllCoinsView.swift */; };
 		564A20A42922824A0016C1B5 /* CoinCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564A20A32922824A0016C1B5 /* CoinCellView.swift */; };
 		564A20A629228DCD0016C1B5 /* NetCoinViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564A20A529228DCD0016C1B5 /* NetCoinViewModel.swift */; };
+		564E8737297568EB00569BEE /* NetworkManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564E8736297568EB00569BEE /* NetworkManagerTest.swift */; };
+		564E87392975697A00569BEE /* NetworkingMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564E87382975697A00569BEE /* NetworkingMock.swift */; };
+		564E873B297569EB00569BEE /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564E873A297569EB00569BEE /* Networking.swift */; };
 		565C0CE3294A4C5000FCBAF7 /* NetCoinRespository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565C0CE2294A4C5000FCBAF7 /* NetCoinRespository.swift */; };
 		56CDD0552924025B00EC112D /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CDD0542924025B00EC112D /* Endpoint.swift */; };
 		56CDD05B29252EAC00EC112D /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CDD05A29252EAC00EC112D /* Double.swift */; };
@@ -79,6 +82,9 @@
 		564A209F292281FC0016C1B5 /* AllCoinsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllCoinsView.swift; sourceTree = "<group>"; };
 		564A20A32922824A0016C1B5 /* CoinCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinCellView.swift; sourceTree = "<group>"; };
 		564A20A529228DCD0016C1B5 /* NetCoinViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetCoinViewModel.swift; sourceTree = "<group>"; };
+		564E8736297568EB00569BEE /* NetworkManagerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerTest.swift; sourceTree = "<group>"; };
+		564E87382975697A00569BEE /* NetworkingMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingMock.swift; sourceTree = "<group>"; };
+		564E873A297569EB00569BEE /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		565C0CE2294A4C5000FCBAF7 /* NetCoinRespository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetCoinRespository.swift; sourceTree = "<group>"; };
 		56CDD0542924025B00EC112D /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		56CDD05A29252EAC00EC112D /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
@@ -203,6 +209,7 @@
 		564A207929224B9F0016C1B5 /* NetCoinTests */ = {
 			isa = PBXGroup;
 			children = (
+				564E87352975689F00569BEE /* NetworkLayer */,
 				56306EA8294CA92E00C9BA89 /* Extension */,
 				56306EA9294CAA3400C9BA89 /* VeiwModel */,
 				56306EAA294CAA4000C9BA89 /* Repository */,
@@ -225,6 +232,7 @@
 				564A209329224D130016C1B5 /* NetworkManager.swift */,
 				564A209629224E340016C1B5 /* NetCoin.swift */,
 				56CDD0542924025B00EC112D /* Endpoint.swift */,
+				564E873A297569EB00569BEE /* Networking.swift */,
 			);
 			path = NetworkLayer;
 			sourceTree = "<group>";
@@ -241,6 +249,15 @@
 				562B32ED293E4A2000EC94C7 /* SearchCoinsView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		564E87352975689F00569BEE /* NetworkLayer */ = {
+			isa = PBXGroup;
+			children = (
+				564E87382975697A00569BEE /* NetworkingMock.swift */,
+				564E8736297568EB00569BEE /* NetworkManagerTest.swift */,
+			);
+			path = NetworkLayer;
 			sourceTree = "<group>";
 		};
 		565C0CE1294A4C2B00FCBAF7 /* Respository */ = {
@@ -417,6 +434,7 @@
 				564A209C29226DC40016C1B5 /* TopMoversView.swift in Sources */,
 				564A20A629228DCD0016C1B5 /* NetCoinViewModel.swift in Sources */,
 				564A209729224E340016C1B5 /* NetCoin.swift in Sources */,
+				564E873B297569EB00569BEE /* Networking.swift in Sources */,
 				56CDD0552924025B00EC112D /* Endpoint.swift in Sources */,
 				564A209A29226D340016C1B5 /* HomeView.swift in Sources */,
 				56CDD06229269B9000EC112D /* CircleButtonAnimationVIew.swift in Sources */,
@@ -438,6 +456,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				564E87392975697A00569BEE /* NetworkingMock.swift in Sources */,
+				564E8737297568EB00569BEE /* NetworkManagerTest.swift in Sources */,
 				56306EAF294CADE600C9BA89 /* NetCoinRepositoryTests.swift in Sources */,
 				562B32F2293F919C00EC94C7 /* NetCoinViewModelTest.swift in Sources */,
 				56306EAD294CACF000C9BA89 /* FakeNetCoinRepository.swift in Sources */,

@@ -9,7 +9,7 @@ import Combine
 protocol NetCoinRepository {
     func getCoins(for url: URL) async throws -> [NetCoin]
 }
-final class NetCoinRepositoryImpl {
+struct NetCoinRepositoryImpl {
     private let networkManager: NetworkActions
     private var cancellables = Set<AnyCancellable>()
     init(networkManager: NetworkActions) {

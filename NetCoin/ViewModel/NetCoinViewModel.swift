@@ -3,7 +3,6 @@
   Created by Kwabena Ankamah on 08/12/2022.
   
 */
-
 import Foundation
 import Combine
 protocol NetCoinViewModelAction: ObservableObject {
@@ -13,15 +12,12 @@ final class NetCoinViewModel {
     var coins: [NetCoin] = []
     @Published private(set) var filteredCoins: [NetCoin] = []
     @Published var searchText: String = ""
-
     private let repository: NetCoinRepository
     private var cancellables = Set<AnyCancellable>()
-    
     var topMovingCoins: [NetCoin]  {
         let topMovers = coins.sorted(by: {$0.priceChangePercentage24H > $1.priceChangePercentage24H})
         return Array(topMovers.prefix(8))
     }
-    
     init(repository: NetCoinRepository) {
         self.repository = repository
     }

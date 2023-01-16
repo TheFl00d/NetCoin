@@ -2,12 +2,6 @@
 import Foundation
 @testable import NetCoin
 
-
-
-
-import Foundation
-@testable import NetCoin
-
 class FakeNetworkManager: NetworkActions {
     func get(url: URL) async throws -> Data {
         do {

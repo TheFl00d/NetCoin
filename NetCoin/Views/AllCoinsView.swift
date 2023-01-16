@@ -39,4 +39,3 @@ struct AllCoinsView: View {
         .padding(.horizontal)
     }
 }
-
